@@ -1,0 +1,190 @@
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	font-size: 36px;
+	color: "black";
+	margin-top: 40px;
+}
+
+h2 {
+	color: #94a97a;
+	font-size: 24px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.info-text {
+	color: #94a97a;
+	font-size: 24px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.info-text2 {
+	color: red;
+	font-size: 24px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.time-range{
+	padding-left: 20px;
+}
+
+.brush {
+	fill: #ccc;
+	fill-opacity: .5;
+	pointer-events: none;
+}
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #555;
+  shape-rendering: crispEdges;
+}
+
+.tick text {
+	font-family: sans-serif;
+	font-size: 11px;
+	fill: #555;
+}
+
+#priovis .x-axis text {
+	font-weight: 600;
+}
+
+.iconPlain  {
+	fill:"#00000";
+}
+
+.area {
+	fill: #825a5a;
+}
+
+.area.area-age {
+	fill: #94a97a;
+}
+
+.bar {
+	fill: #93bebf;
+}
+
+/*Radio Button CSS */
+
+.container2 {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 8px;
+	cursor: pointer;
+	font-size: 18px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container2 input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+	border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container2:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container2 input:checked ~ .checkmark {
+	background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container2 input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container2 .checkmark:after {
+	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/*Slider*/
+.slider-label{
+	color: #94a97a;
+	font-size: 24px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.slidecontainer {
+	width: 50%;
+}
+
+.slider {
+	-webkit-appearance: none;
+	width: 50%;
+	height: 25px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+}
+
+.slider:hover {
+	opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	background: #4CAF50;
+	cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	background: #4CAF50;
+	cursor: pointer;
+}
+
+/*-- age labe --*/
+.age-label{
+	color: "black";
+	font-size: 24px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
