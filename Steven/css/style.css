@@ -1,0 +1,19 @@
+/* custom css rules */
+
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+	text-align: center;
+	font-family: serif;
+}
+
+h5 {
+	text-align: center;
+	font-family: serif;
+}
+
+.label {
+ font-family: serif;
+}
