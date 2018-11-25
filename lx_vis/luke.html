@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Opioid Crisis</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>Opioid crisis proportional symbol US map, Luke Xu</h1>
+    <div class="container">
+        <form class="form-inline">
+            <div class="form-group">
+                <select class="form-control" id="select-box">
+                    <option value="Deaths">Deaths</option>
+                    <option value="Population">Population</option>
+                </select>
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+        <div id="chart-area"></div>
+    </div>
+
+    <!-- Load JS libraries: jQuery, bootstrap, D3, D3 tooltip -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/queue.v1.min.js"></script>
+    <script src="js/d3-tip.js"></script>
+
+    <script src="js/topojson.v1.min.js"></script>
+    <script src="js/luke.js"></script>
+</body>
+</html>
