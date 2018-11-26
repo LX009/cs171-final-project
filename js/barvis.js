@@ -23,10 +23,10 @@ BarVis.prototype.initVis = function(){
     var vis = this;
     console.log(vis.data[1]);
 
-    vis.margin = { top: 150, right: 20, bottom: 200, left: 50 };
+    vis.margin = { top: 50, right: 20, bottom: 200, left: 50 };
 
     vis.width = $("#" + vis.parentElement).width() - vis.margin.left - vis.margin.right,
-        vis.height = 700 - vis.margin.top - vis.margin.bottom;
+        vis.height = 600 - vis.margin.top - vis.margin.bottom;
 
     // SVG drawing area
     vis.svg = d3.select("#" + vis.parentElement).append("svg")
