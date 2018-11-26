@@ -2,23 +2,23 @@
 
 
 
-// Set up SVG
-var margin = {top: 160, right: 50, bottom: 50, left: 100};
+// Set up svgLuke
+var marginLuke = {top: 160, right: 50, bottom: 50, left: 100};
 
-var width = 1000 - margin.left - margin.right,
-    height = 1000 - margin.top - margin.bottom;
+var widthLuke = 1000 - marginLuke.left - marginLuke.right,
+    heightLuke = 1000 - marginLuke.top - marginLuke.bottom;
 
-var svg = d3.select("#chart-area").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom);
+var svgLuke = d3.select("#symbol-map-area").append("svg")
+    .attr("width", widthLuke + marginLuke.left + marginLuke.right)
+    .attr("height", heightLuke + marginLuke.top + marginLuke.bottom);
 
-var projection = d3.geoAlbersUsa()
-    .translate([width / 2, height / 2]);
+var projectionLuke = d3.geoAlbersUsa()
+    .translate([widthLuke / 2, heightLuke / 2]);
 
-var path = d3.geoPath()
-    .projection(projection);
+var pathLuke = d3.geoPath()
+    .projection(projectionLuke);
 
-var color = d3.scaleQuantize()
+var colorLuke = d3.scaleQuantize()
     .range(["#deebf7",
         "#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#08519c", "#08306b"]);
 
@@ -27,11 +27,11 @@ var circleRadius = d3.scaleLinear()
 
 /* main JS file */
 
-var allData;
+var allDataLuke;
 // us-10m dataset from https://github.com/d3/d3-geo/blob/master/test/data/us-10m.json
-var usa;
+var usaLuke;
 
-d3.select("#select-box").on("change", createVisualization);
+d3.select("#binary").on("change", createVisualization);
 
 queue()
     .defer(d3.csv, "data/overdoses.csv")
@@ -71,15 +71,15 @@ function manageData(error, data1, data2, data3, data4) {
 
     });
 
-    allData = data1;
-    allData.sort(function(a, b){
+    allDataLuke = data1;
+    allDataLuke.sort(function(a, b){
         return b.Deaths - a.Deaths;
     });
-    
+
     var temp = topojson.feature(data2, data2.objects.states).features;
 
     temp.forEach(function(d){
-        allData.forEach(function (e) {
+        allDataLuke.forEach(function (e) {
            if (d.id == e.ID) {
                d.Deaths = e.Deaths;
                d.Population = e.Population;
@@ -87,24 +87,26 @@ function manageData(error, data1, data2, data3, data4) {
         });
     });
 
-    usa = temp;
+    usaLuke = temp;
 
     // use data2 to map US
-    // console.log(usa);
+    // console.log(usaLuke);
 
     createVisualization();
 }
 
 function createVisualization() {
 
-    var val = d3.select("#select-box").property("value");
+    var val = d3.select("#binary").property("value");
 
-    color.domain([
-        d3.min(usa, function(d) { return d[val]; }), d3.max(usa, function(d) { return d[val]; })
+    console.log(val);
+
+    colorLuke.domain([
+        d3.min(usaLuke, function(d) { return d[val]; }), d3.max(usaLuke, function(d) { return d[val]; })
     ]);
 
     circleRadius.domain([
-        d3.min(allData, function(d) { return d[val]; }), d3.max(allData, function(d) { return d[val]; })
+        d3.min(allDataLuke, function(d) { return d[val]; }), d3.max(allDataLuke, function(d) { return d[val]; })
     ]);
 
     if (val == "Deaths") {
@@ -113,39 +115,39 @@ function createVisualization() {
         circleRadius.range([5, 45]);
     }
 
-    var state = svg.selectAll("path")
-        .data(usa)
+    var state = svgLuke.selectAll("path")
+        .data(usaLuke)
         .enter()
         .append("path")
-        .attr("d", path)
+        .attr("d", pathLuke)
         .attr("class", "state");
         // .attr("fill", function (d) {
         //     if (isNaN(d.Deaths)) {
         //         return "#f7fbff";
         //     } else {
-        //         return color(d.Deaths);
+        //         return colorLuke(d.Deaths);
         //     }
         // });
 
     // Tooltip, as seen on https://github.com/VACLab/d3-tip
-    var tool_tip = d3.tip()
+    var tool_tipLuke = d3.tip()
         .attr("class", "d3-tip")
         .offset([-8, 0])
         .html(function(d) {
             return "<b>" + d.State + "</b><br/><br/>" + "Opioid Related Deaths: " + d.Deaths + "<br/><br/>" + "Population: " + d.Population;
         });
-    svg.call(tool_tip);
+    svgLuke.call(tool_tipLuke);
 
 
-    var circle = svg.selectAll(".state-value")
-        .data(allData);
+    var circle = svgLuke.selectAll(".state-value")
+        .data(allDataLuke);
 
     circle.enter()
         .append("circle")
         .attr("class", "state-value")
         .merge(circle)
-        .on("mouseover", tool_tip.show)
-        .on("mouseout", tool_tip.hide)
+        .on("mouseover", tool_tipLuke.show)
+        .on("mouseout", tool_tipLuke.hide)
         .transition()
         .duration(600)
         .style("opacity", 0.4)
@@ -169,7 +171,7 @@ function createVisualization() {
         .attr("fill", "#651FFF")
         .attr("stroke", "#311B92")
         .attr("transform", function(d) {
-            return "translate(" + projection([d.long, d.lat]) + ")";
+            return "translate(" + projectionLuke([d.long, d.lat]) + ")";
         })
         .on("end", function() {
             d3.select(this).transition().duration(200).style("opacity", 0.8); // Fade in
@@ -178,22 +180,22 @@ function createVisualization() {
     circle.exit().remove();
 
     // Legend
-    svg.append("circle")
+    svgLuke.append("circle")
         .attr("fill", "#651FFF")
         .attr("stroke", "#311B92")
         .style("opacity", 0.8)
         .attr("r", 15)
-        .attr("cx", (width / 2) - 25)
+        .attr("cx", (widthLuke / 2) - 25)
         .attr("cy", 120)
         .attr("class", "legend-marker");
 
-    svg.append("text")
+    svgLuke.append("text")
         .attr("class", "legend-text")
         .attr("text-anchor", "start")
-        .attr("x", (width / 2) + 4)
+        .attr("x", (widthLuke / 2) + 4)
         .attr("y", 120 + 5);
 
-    svg.selectAll(".legend-text")
+    svgLuke.selectAll(".legend-text")
         .text(function() {
             if (val == "Deaths") {
                 return d3.format(".2r")(circleRadius.invert(15)) + " deaths";

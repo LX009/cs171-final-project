@@ -17,6 +17,7 @@
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <!--AOS scrolling library-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 
   </head>
 
@@ -73,6 +74,19 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h2>Placeholder: United States Opioid map</h2>
+            <div class="container">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <select class="form-control" id="binary">
+                            <option value="Deaths">Deaths</option>
+                            <option value="Population">Population</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="container">
+                <div id="symbol-map-area"></div>
+            </div>
             <p class="lead">Caption</p>
           </div>
         </div>
@@ -226,12 +240,14 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/d3.min.js"></script>
+    <script src="js/d3-tip.js"></script>
     <script src="js/d3-legend.min.js"></script>
     <script src="js/queue.v1.min.js"></script>
     <script src="js/topojson.v1.min.js"></script>
 
     <!-- Load visualizations -->
     <script src="js/steven.js"></script>
+    <script src="js/luke.js"></script>
 
 
   </body>

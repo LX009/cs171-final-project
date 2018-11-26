@@ -146,7 +146,7 @@ var national_map_width = $("#map").width() - national_map_margin.left - national
 
 var national_map_svg = d3.select("#map").append("svg")
     .attr("width", national_map_width + national_map_margin.left + national_map_margin.right)
-    .attr("height", national_map_width + national_map_margin.top + national_map_margin.bottom);
+    .attr("height", national_map_height + national_map_margin.top + national_map_margin.bottom);
 
 var national_map_projection = d3.geoAlbersUsa()
     .translate([national_map_width / 2, national_map_height / 2])
