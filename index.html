@@ -19,6 +19,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/vickystyle.css">
+    <link rel="stylesheet" href="css/main.css">
 
   </head>
 
@@ -184,6 +185,14 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h2>Placeholder: Massachusetts Opioid Map</h2>
+            <div id="binaryMaps" data-active-date="2005" style="padding-bottom: 5%;" role="img" aria-label="Three maps showing opioid-related deaths in Massachusetts in 5-year intervals from 2001 to 2015.">
+                <div class="btn-group btn-group-justified">
+                    <div class="btn btn-sm btn-default js-toggle-binary-map active" data-date="2005">2001-2005</div>
+                    <div class="btn btn-sm btn-default js-toggle-binary-map"  data-date="2010">2006-2010</div>
+                    <div class="btn btn-sm btn-default js-toggle-binary-map"  data-date="2015">2011-2015</div>
+                </div>
+                <div id="binaryMaps_legend" class="vis-legend"></div>
+                <div id="binaryMaps_maps"></div>
           </div>
         </div>
       </div>
@@ -307,6 +316,9 @@
   	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
   	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
   	<script src="//cdn.jsdelivr.net/jquery.ui.touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/colorbrewer.js"></script>
+    <script src="js/modernizr.js"></script>
 
   	<!-- Visualization objects -->
   	<script src="js/barvis.js"></script>
@@ -316,6 +328,7 @@
     <script src="js/steven.js"></script>
     <script src="js/luke.js"></script>
     <script src="js/vicky.js"></script>
+    <script src="js/jung.js"></script>
 
 
   </body>

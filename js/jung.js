@@ -33,12 +33,12 @@
         data.data.forEach(function(data, i) {
             var wrapper = svgJung.append('div').attr('class', 'map-wrapper').append('div');
 
-            createVisualization(wrapper, states, data);
+            createMassVisualization(wrapper, states, data);
         });
     }
 
 
-    function createVisualization(wrapper, geo, data) {
+    function createMassVisualization(wrapper, geo, data) {
 
 
         wrapper.append('span')
@@ -235,4 +235,3 @@
         $('.js-toggle-binary-map').removeClass('active');
         $(this).addClass('active');
     });
-

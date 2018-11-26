@@ -149,8 +149,8 @@ var national_map_svg = d3.select("#map").append("svg")
     .attr("height", national_map_height + national_map_margin.top + national_map_margin.bottom);
 
 var national_map_projection = d3.geoAlbersUsa()
-    .translate([national_map_width / 2, national_map_height / 2])
-    .scale(600);
+    .translate([national_map_width / 2, national_map_height / 1.8])
+    .scale(800);
 
 var national_map_path = d3.geoPath()
     .projection(national_map_projection);
