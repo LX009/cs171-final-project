@@ -6,14 +6,14 @@
 var marginLuke = {top: 160, right: 50, bottom: 50, left: 100};
 
 var widthLuke = 1000 - marginLuke.left - marginLuke.right,
-    heightLuke = 1000 - marginLuke.top - marginLuke.bottom;
+    heightLuke = 600 - marginLuke.top - marginLuke.bottom;
 
 var svgLuke = d3.select("#symbol-map-area").append("svg")
     .attr("width", widthLuke + marginLuke.left + marginLuke.right)
     .attr("height", heightLuke + marginLuke.top + marginLuke.bottom);
 
 var projectionLuke = d3.geoAlbersUsa()
-    .translate([widthLuke / 2, heightLuke / 2]);
+    .translate([widthLuke / 2, heightLuke / 1.5]);
 
 var pathLuke = d3.geoPath()
     .projection(projectionLuke);
@@ -186,14 +186,14 @@ function createVisualization() {
         .style("opacity", 0.8)
         .attr("r", 15)
         .attr("cx", (widthLuke / 2) - 25)
-        .attr("cy", 120)
+        .attr("cy", 20)
         .attr("class", "legend-marker");
 
     svgLuke.append("text")
         .attr("class", "legend-text")
         .attr("text-anchor", "start")
         .attr("x", (widthLuke / 2) + 4)
-        .attr("y", 120 + 5);
+        .attr("y", 20 + 5);
 
     svgLuke.selectAll(".legend-text")
         .text(function() {
