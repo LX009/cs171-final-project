@@ -6,7 +6,6 @@
   margin: 0 auto;
 }
 
-
   #binaryMaps_maps .map-wrapper {
       display: inline-block;
     width: 33%;
@@ -48,12 +47,13 @@
         bottom: 5%;
         font-size: 12px; } }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 5000px) {
     #binaryMaps .btn-group {
       display: inline-block;
+      border-width: 2px;
       margin: 2px auto; } }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 5000px) {
   #binaryMaps[data-active-date] .map-wrapper {
     display: none; }
   #binaryMaps[data-active-date="2005"] .map-wrapper:first-child {
@@ -63,7 +63,7 @@
   #binaryMaps[data-active-date="2015"] .map-wrapper:last-child {
     display: block; } }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 5000px) {
   #binaryMaps .map-wrapper {
     display: block;
     width: 75%;
@@ -123,5 +123,3 @@
   color: #455A64;
   font-size: 12px;
   font-weight: normal; }
-
-
