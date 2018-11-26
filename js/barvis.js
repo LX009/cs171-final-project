@@ -23,17 +23,17 @@ BarVis.prototype.initVis = function(){
     var vis = this;
     console.log(vis.data[1]);
 
-    vis.margin = { top: 50, right: 20, bottom: 200, left: 50 };
+    vis.margin = { top: 30, right: 20, bottom: 100, left: 50 };
 
     vis.width = $("#" + vis.parentElement).width() - vis.margin.left - vis.margin.right,
-        vis.height = 600 - vis.margin.top - vis.margin.bottom;
+        vis.height = 500 - vis.margin.top - vis.margin.bottom;
 
     // SVG drawing area
     vis.svg = d3.select("#" + vis.parentElement).append("svg")
         .attr("width", vis.width + vis.margin.left + vis.margin.right)
         .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
         .append("g")
-        .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
+        .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ") scale(0.9 0.9)");
 
 
     // Scales and axes

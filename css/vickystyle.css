@@ -4,28 +4,28 @@ body {
 }
 
 h1 {
-	font-size: 36px;
+	font-size: 24px;
 	color: "black";
 	margin-top: 40px;
 }
 
 h2 {
 	color: #94a97a;
-	font-size: 24px;
+	font-size: 20px;
 	margin-top: 10px;
 	margin-bottom: 20px;
 }
 
 .info-text {
 	color: #94a97a;
-	font-size: 24px;
+	font-size: 20px;
 	margin-top: 10px;
 	margin-bottom: 20px;
 }
 
 .info-text2 {
 	color: red;
-	font-size: 24px;
+	font-size: 20px;
 	margin-top: 10px;
 	margin-bottom: 30px;
 }
@@ -141,7 +141,7 @@ h2 {
 /*Slider*/
 .slider-label{
 	color: #94a97a;
-	font-size: 24px;
+	font-size: 20px;
 	margin-top: 5px;
 	margin-bottom: 10px;
 }
@@ -184,7 +184,7 @@ h2 {
 /*-- age labe --*/
 .age-label{
 	color: "black";
-	font-size: 24px;
+	font-size: 20px;
 	margin-top: 10px;
 	margin-bottom: 20px;
 }
