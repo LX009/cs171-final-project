@@ -1,4 +1,4 @@
-    var svg = d3.select('#binaryMaps_maps');
+    var svgJung = d3.select('#binaryMaps_maps');
 
     var geojson;
 
@@ -8,23 +8,22 @@
         .defer(d3.json, 'data/rate_5yr_odc.json')
         .await(visualize);
 
-    var width = 525,
-        height = 325;
+    var widthJung = 525,
+        heightJung = 325;
 
-    var projection = d3.geo.conicConformal()
+    var projectionJung = d3.geoConicConformal()
         .parallels([41 + 43 / 60, 42 + 41 / 60])
         .rotate([71 + 30 / 60, -41])
         .scale([8600])
         .translate([280, 360]);
 
     var $maps_sub = d3.select("#carte").append("svg")
-        .attr("width", width)
-        .attr("height", height);
+        .attr("width", widthJung)
+        .attr("height", heightJung);
 
-    //var colors_5yr = ["#f1f1f1", "#d3d3d3", "#9ecae1", "#6baed6", "#2171b5", "#084594"];
-
-    var path = d3.geo.path().projection(projection),
-        palette = d3.scale.threshold().domain([-0.1, 0.1, 2.1, 6.1, 17.1, Infinity])
+    var pathJung = d3.geoPath().projection(projectionJung);
+    var palette = d3.scaleThreshold()
+            .domain([-0.1, 0.1, 2.1, 6.1, 17.1, Infinity])
         .range(["#f1f1f1",'#fee5d9','#fcae91','#fb6a4a','#de2d26','#a50f15']);
 
 
@@ -32,7 +31,7 @@
 
 
         data.data.forEach(function(data, i) {
-            var wrapper = svg.append('div').attr('class', 'map-wrapper').append('div');
+            var wrapper = svgJung.append('div').attr('class', 'map-wrapper').append('div');
 
             createVisualization(wrapper, states, data);
         });
@@ -65,7 +64,7 @@
             .classed("svg-container", true)
             .append("svg")
             .attr("preserveAspectRatio", "xMinYMin meet")
-            .attr("viewBox", "0 0 " + width + " " + height)
+            .attr("viewBox", "0 0 " + widthJung + " " + heightJung)
 
             .style('padding-top', "2%")
             .classed("svg-content-responsive", true);
@@ -74,7 +73,7 @@
             .data(geo.features)
             .enter()
             .append('path')
-            .attr('d', path)
+            .attr('d', pathJung)
             .style("stroke", "lightgray")
             .style("stroke-width", "0.0px")
             .style('fill', function(d, i) {
@@ -135,24 +134,24 @@
                 self.node().parentNode.parentNode.getElementsByClassName('selection-label')[0].innerHTML = "";
 		d3.selectAll('path.bsasmap').style({
                     'fill-opacity': 1
-                }).style("stroke", "white").style("stroke-width", "0.0px");
+                }).style("stroke", "white")
+            .style("stroke-width", "0.0px");
             })
-
+    //
         function notify(selector, eventName) {
-            d3.selectAll(selector)[0].forEach(function(el, i) {
-                var shape = d3.select(el);
-                shape.on(eventName)(shape);
-            });
-        }
 
+        }
+    //
+    //         d3.selectAll(selector)[0].forEach(function(el, i) {
+    //             console.log(el);
+    //             var shape = d3.select(el);
+    //             shape.on(eventName)(shape);
+    //         });
+    //     }
+    //
     }
 
-    //var opChgScale = d3.scale.threshold().domain([0, 0.1, 0.15, 0.35, 0.6, 1.00]).range(['#d0d1e6','#a6bddb','#67a9cf','#3690c0','#02818a','#016450'])
-    //opChgScale.domainStrings = function() {
-    //    return (['0%', '>0-14%', '>14-24%', '>24-33%', '>33-46%', '>46-100%'
-    //    ]);
-    //};
-    var opChgScale = d3.scale.threshold().domain([0.1, 2.1, 6.1, 17.1, Infinity])
+    var opChgScale = d3.scaleThreshold().domain([0.1, 2.1, 6.1, 17.1, Infinity])
         .range(['#fee5d9','#fcae91','#fb6a4a','#de2d26','#a50f15']);
         //.range(colors_5yr);
     opChgScale.domainStrings = function() {
@@ -165,8 +164,6 @@
 
         var legendHeight = 30,
             legendWidth = '90%';
-
-
 
         var $maps_sub_svg = d3.select('#' + szDivId).append("svg")
             .attr("width", legendWidth)
