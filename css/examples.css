@@ -1,0 +1,83 @@
+/* Adapted from Luke's Midterm 2 */
+#section0 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../img/img2.jpeg);
+	padding: 0;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+}
+
+.intro {
+	text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+body{
+	font-family: 'Roboto Slab', serif;
+	color: #333;
+}
+h1{
+	font-size: 48px;
+	margin-bottom: 20px;
+	font-weight: 400;
+}
+p.headerCaption{
+	font-size: 20px;
+	font-weight: 300;
+}
+.section{
+	text-align:center;
+}
+
+
+/* Custom CSS
+ * --------------------------------------- */
+#menu li {
+	display:inline-block;
+	margin: 10px;
+	color: #000;
+	background:#fff;
+	background: rgba(255,255,255, 0.5);
+	-webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+#menu li.active{
+	background:#666;
+	background: rgba(0,0,0, 0.5);
+	color: #fff;
+}
+#menu li a{
+	text-decoration:none;
+	color: #000;
+}
+#menu li.active a:hover{
+	color: #000;
+}
+#menu li:hover{
+	background: rgba(255,255,255, 0.8);
+}
+#menu li a,
+#menu li.active a{
+	padding: 9px 18px;
+	display:block;
+}
+#menu li.active a{
+	color: #fff;
+}
+#menu{
+	position:fixed;
+	top:0;
+	left:0;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
+.fp-tooltip{
+	color: #757575 !important;
+}

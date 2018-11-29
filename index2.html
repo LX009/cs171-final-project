@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CS171 Final Project</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">    
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="css/examples.css" />
+
+</head>
+<body>
+
+<ul id="menu">
+    <li data-menuanchor="firstPage" class="active"><a href="#p0">Intro</a></li>
+    <li data-menuanchor="secondPage"><a href="#p1">First slide</a></li>
+    <li data-menuanchor="thirdPage"><a href="#p2">Second slide</a></li>
+    <li data-menuanchor="fourthPage"><a href="#p3">Third slide</a></li>
+</ul>
+
+<div id="fullpage">
+    <div class="section" id="section0">
+        <div class="intro_image"></div>
+        <div class="intro">
+            <h1 class="mb-4">Killed by Pain</h1>
+            <p class="headerCaption">
+                Everyday, <b>over 115 Americans</b> die from an opioid overdose.
+                Prescription opioid misuse costs <b>$78.5b a year</b> in healthcare, lost productivity, addiction treatment, and criminal justice.
+                <br><br>
+                The situation is bad, and it's only getting worse.
+                <br><br>
+                <b>This is the story of the opioid crisis in America.</b>
+            </p>
+        </div>
+    </div>
+    <div class="section" id="section1">
+        <div class="row">
+            <div class="col-md-6" id="christine1">
+                Hello
+            </div>
+            <div class="col-md-6">
+                <h2>Meet Christine.</h2>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section2">
+        <h1>Section 2</h1>
+    </div>
+    <div class="section" id="section3">
+        <h1>Section 3</h1>
+    </div>
+    <div class="section" id="section4">
+        <h1>Section 4</h1>
+    </div>
+    <div class="section" id="section5">
+        <h1>Section 5</h1>
+    </div>
+    <div class="section" id="section6">
+        <h1>Section 6</h1>
+    </div>
+    <div class="section" id="section7">
+        <h1>Section 7</h1>
+    </div>
+    <div class="section" id="section8">
+        <h1>Section 8</h1>
+    </div>
+    <div class="section" id="section9">
+        <h1>Section 9</h1>
+    </div>
+    <div class="section" id="section10">
+        <h1>Section 10</h1>
+    </div>
+    <div class="section" id="section11">
+        <h1>Section 11</h1>
+    </div>
+    <div class="section" id="section12">
+        <h1>Section 12</h1>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/fullpage.js"></script>
+<script type="text/javascript" src="examples.js"></script>
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        sectionsColor: ["#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE"],
+        anchors: ['p0', 'p1', 'p2', 'p3', 'p4',
+        'p5', 'p6', 'p7', 'p8',
+        'p9', 'p10', 'p11', 'p12'],
+        navigation:true,
+        navigationTooltips: ['Page 0', 'Page 1', 'Page 2', 'Page 3', 'Page 4', 'Page 5', 'Page 6', 'Page 7', 'Page 8', 'Page 9', 'Page 10', 'Page 11', 'Page 12'],
+        showActiveTooltip: true,
+        menu: '#menu'
+    });
+</script>
+
+</body>
+</html>
