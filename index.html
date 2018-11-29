@@ -250,14 +250,14 @@
     <section id="7" data-aos="zoom-out-up">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
+          <div class="col-lg-12 mx-auto">
             <h2>% Deaths by county</h2>
             <div id="binaryMaps" data-active-date="2005" style="padding-bottom: 5%;" role="img" aria-label="Three maps showing opioid-related deaths in Massachusetts in 5-year intervals from 2001 to 2015.">
-                <div class="btn-group btn-group-justified">
-                    <button class="btn btn-sm btn-default js-toggle-binary-map active" data-date="2005">2001-2005</button>
-                    <button class="btn btn-sm btn-default js-toggle-binary-map"  data-date="2010">2006-2010</button>
-                    <button class="btn btn-sm btn-default js-toggle-binary-map"  data-date="2015">2011-2015</button>
-                </div>
+
+                <label class="radio" style="margin:5px;" ><input type="radio" class="js-toggle-binary-map active" data-date="2005" name="optradio" checked> 2001 - 2005 </label>
+                <label class="radio" style="margin:5px;"><input type="radio" class="js-toggle-binary-map" data-date="2010" name="optradio"> 2006 - 2010 </label>
+                <label class="radio" style="margin:5px;"><input type="radio" class="js-toggle-binary-map" data-date="2015" name="optradio"> 2011 - 2015 </label>
+
                 <div id="binaryMaps_legend" class="vis-legend"></div>
                 <div id="binaryMaps_maps"></div>
           </div>
