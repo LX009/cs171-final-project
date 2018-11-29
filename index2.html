@@ -22,10 +22,12 @@
 <body>
 
 <ul id="menu">
-    <li data-menuanchor="firstPage" class="active"><a href="#p0">Intro</a></li>
-    <li data-menuanchor="secondPage"><a href="#p1">First slide</a></li>
-    <li data-menuanchor="thirdPage"><a href="#p2">Second slide</a></li>
-    <li data-menuanchor="fourthPage"><a href="#p3">Third slide</a></li>
+    <li data-menuanchor="p0" class="active"><a href="#p0">Intro</a></li>
+    <li data-menuanchor="p1"><a href="#p1">Meet Christie</a></li>
+    <li data-menuanchor="p6"><a href="#p6">Rise of a crisis</a></li>
+    <li data-menuanchor="p7"><a href="#p7">Closer to home</a></li>
+    <li data-menuanchor="p11"><a href="#p11">How to help</a></li>
+    <li data-menuanchor="p12"><a href="#p12">Team</a></li>
 </ul>
 
 <div id="fullpage">
@@ -123,35 +125,38 @@
         </div>
     </div>
     <div class="section" id="section7">
-        <h1>Section 7</h1>
+        <h1>Massachusetts storytelling/intro</h1>
     </div>
     <div class="section" id="section8">
-        <h1>Section 8</h1>
+        <h1>Jung's vis</h1>
     </div>
     <div class="section" id="section9">
-        <h1>Section 9</h1>
+        <h1>Vicky's vis</h1>
     </div>
     <div class="section" id="section10">
-        <h1>Section 10</h1>
+        <h1>What's being done</h1>
     </div>
     <div class="section" id="section11">
-        <h1>Section 11</h1>
+        <h1>How we can help</h1>
     </div>
     <div class="section" id="section12">
-        <h1>Section 12</h1>
+        <h1>About us Bootstrap 4 column thing</h1>
     </div>
-</div>
+    <div class="section" id="section13">
+        <h1>Sources + leftover links + whatever </h1>
+    </div>
+    
 
 <script type="text/javascript" src="js/fullpage.js"></script>
 <script type="text/javascript" src="examples.js"></script>
 <script type="text/javascript">
     var myFullpage = new fullpage('#fullpage', {
-        sectionsColor: ["#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE"],
+        sectionsColor: ["#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE"],
         anchors: ['p0', 'p1', 'p2', 'p3', 'p4',
         'p5', 'p6', 'p7', 'p8',
-        'p9', 'p10', 'p11', 'p12'],
+        'p9', 'p10', 'p11', 'p12', 'p13'],
         navigation:true,
-        navigationTooltips: ['Page 0', 'Page 1', 'Page 2', 'Page 3', 'Page 4', 'Page 5', 'Page 6', 'Page 7', 'Page 8', 'Page 9', 'Page 10', 'Page 11', 'Page 12'],
+        navigationTooltips: ['Introduction', 'Meet Christie', 'Explore 2014', 'The First Wave', 'The Second Wave', 'The Third Wave', 'Explore history', 'Closer to home', 'Explore MA counties', 'Explore MA demographics', 'Initiatives', 'How to help', 'About us', 'Sources'],
         showActiveTooltip: true,
         menu: '#menu'
     });

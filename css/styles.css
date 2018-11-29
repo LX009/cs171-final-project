@@ -35,6 +35,7 @@
 }
 
 .half-image {
+	filter: grayscale(0.6);
 	padding: 0;
 	width: 90%;
 	margin:0 auto;
@@ -110,7 +111,7 @@ p{
 }
 
 p.headerCaption{
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 300;
 }
 
@@ -147,9 +148,9 @@ p.headerCaption{
 	margin: 10px;
 	color: #000;
 	background:#fff;
-	background: rgba(255,255,255, 0.5);
-	-webkit-border-radius: 10px;
-            border-radius: 10px;
+	background: rgba(200,200,200, 0.5);
+	-webkit-border-radius: 5px;
+            border-radius: 5px;
 }
 #menu li.active{
 	background:#666;
@@ -177,7 +178,7 @@ p.headerCaption{
 #menu{
 	position:fixed;
 	top:0;
-	left:0;
+	left:5%;
 	height: 40px;
 	z-index: 70;
 	width: 100%;
