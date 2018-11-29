@@ -1,0 +1,189 @@
+/* Adapted from Luke's Midterm 2 */
+
+#section0, #section3, #section4, #section5 {
+	padding: 0;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	color: white;
+}
+
+#section0 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../img/img2.jpeg);
+	color: #333;
+}
+
+#section3 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../img/car.jpg);
+}
+
+#section4 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.6)), url(../img/hospital.jpg);
+}
+
+#section5 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.6)), url(../img/smoke.jpg);
+}
+
+.intro {
+	text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.half-image {
+	padding: 0;
+	width: 90%;
+	margin:0 auto;
+	border-radius: 15px;
+	border: 2px solid #424242;
+}
+
+.halftext {
+	text-align: left;
+	padding-right: 8%;
+}
+
+.text {
+	text-align: left;
+    position: absolute;
+    top: 50%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body{
+	font-family: 'Roboto Slab', serif;
+	color: #333;
+}
+
+h1{
+	font-size: 48px;
+	margin-bottom: 20px;
+	font-weight: 400;
+}
+
+h3 {
+	display: inline-block;
+	font-size: 24px;
+	font-style: italic;
+}
+
+.history {
+	padding: 10px;
+	border-radius: 10px;
+	background-color: rgba(172, 172, 172, 0.5);
+}
+
+.symptom {
+	font-size: 18px;
+	font-weight: 700;
+	margin-top: 20px;
+
+	text-align: center;
+
+	animation: shake 2s infinite; 
+}
+
+.caption {
+	width: 60%;
+	margin: 0 auto;
+}
+
+/* Adapted from https://www.w3schools.com/howto/howto_css_shake_image.asp */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    60% { transform: translate(-1px, 1px) rotate(0.5deg); }
+    70% { transform: translate(0px, 0px) rotate(-0.5deg); }
+    80% { transform: translate(-1px, -1px) rotate(0deg); filter: blur(1px);}
+    90% { transform: translate(0px, 0px) rotate(-0.5deg); }
+    100% { transform: translate(1px, -1px) rotate(0deg); }
+}
+
+/* All p things go here */
+p{
+	font-size: 16px;
+	font-weight: 400;
+}
+
+p.headerCaption{
+	font-size: 20px;
+	font-weight: 300;
+}
+
+.section{
+	text-align:center;
+}
+
+/* Adapted from https://www.kevinleary.net/pulsating-css3-animations/ */
+.pulsate {
+	font-size: 16px;
+	font-weight: 400;
+    -webkit-animation: pulsate 2s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.5;
+}
+@-webkit-keyframes pulsate {
+    0% { 
+        opacity: 0.5;
+    }
+    50% { 
+        opacity: 1.0;
+    }
+    100% { 
+        opacity: 0.5;
+    }
+}
+
+
+
+/* Custom CSS
+ * --------------------------------------- */
+#menu li {
+	display:inline-block;
+	margin: 10px;
+	color: #000;
+	background:#fff;
+	background: rgba(255,255,255, 0.5);
+	-webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+#menu li.active{
+	background:#666;
+	background: rgba(0,0,0, 0.5);
+	color: #fff;
+}
+#menu li a{
+	text-decoration:none;
+	color: #000;
+}
+#menu li.active a:hover{
+	color: #000;
+}
+#menu li:hover{
+	background: rgba(255,255,255, 0.8);
+}
+#menu li a,
+#menu li.active a{
+	padding: 9px 18px;
+	display:block;
+}
+#menu li.active a{
+	color: #fff;
+}
+#menu{
+	position:fixed;
+	top:0;
+	left:0;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
+.fp-tooltip{
+	color: #757575 !important;
+}
