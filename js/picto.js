@@ -112,7 +112,7 @@ PictoVis.prototype.wrangleData = function(){
     }
     else {
 
-        document.getElementById("gender-info").innerHTML = "Massachusetts residents";
+        document.getElementById("gender-info").innerHTML = "residents";
         document.getElementById("num-info").innerHTML = vis.data[ageRange].E + "%";
 
     }
