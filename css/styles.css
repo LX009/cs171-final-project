@@ -97,12 +97,12 @@ ul {
 	border-radius: 10px;
 	background-color: rgba(172, 172, 172, 0.5);
 	opacity: 0.88;
-	transition: 0.5s ease;
+	transition: 0.5s;
 }
 
 .history:hover {
 	opacity: 1;
-	transition: 0.5s ease;
+	transition: 0.5s;
 }
 
 .symptom {
@@ -148,7 +148,7 @@ ul {
 	border-radius: 10px;
 	background-color: rgba(172, 172, 172, 0.6);
 	opacity: 0.88;
-	transition: 0.5s ease;
+	transition: 0.5s;
 }
 
 .name {
