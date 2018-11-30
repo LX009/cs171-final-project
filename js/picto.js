@@ -120,6 +120,8 @@ PictoVis.prototype.wrangleData = function(){
     document.getElementById("age-info").innerHTML = vis.data[ageRange].Age;
     document.getElementById("age-selected").innerHTML = ageValue;
 
+    document.getElementById("agerange-selected").innerHTML = vis.data[ageRange].Age;
+
     ////////
 
     vis.updateVis(ageRange, genderValue);
@@ -180,7 +182,37 @@ PictoVis.prototype.updateVis = function(ageRange, genderValue){
         })
         .classed("iconPlain",true);
 
+    vis.svg
+        .append("use")
+        .attr("xlink:href","#iconCustom")
+        .attr("x", -50)
+        .attr("y",22)
+        .attr("fill", "black")
+        .attr("class","legend")
+        .classed("iconPlain",true);
+
+
+    vis.svg
+        .append("text")
+        .attr("x", -37)
+        .attr("y", 70)
+        .text("=");
+
+    var legend = vis.svg;
+
+    legend.append("text")
+        .attr("class","legend")
+        .merge(legend)
+        .attr("x", -50)
+        .attr("y", 100)
+        .text(function(){
+            return Math.round(vis.data[ageRange].D/100) + " ppl";
+        });
+
+    legend.exit().remove();
+
 }
+
 PictoVis.prototype.onSelectionChange = function(selectionStart, selectionEnd){
     var vis = this;
 

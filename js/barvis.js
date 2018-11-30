@@ -208,10 +208,6 @@ BarVis.prototype.wrangleData = function(){
         vis.domain = all.length;
     }
 
-
-
-
-
 	vis.updateVis(genderValue, ageRange);
 }
 
@@ -257,8 +253,6 @@ BarVis.prototype.updateVis = function(genderValue, ageRange){
             }
             else
                 return "green";
-
-
         })
         .attr("width", vis.x.bandwidth())
         .attr("height", function(d){
@@ -269,6 +263,25 @@ BarVis.prototype.updateVis = function(genderValue, ageRange){
         })
         .attr("y", function(d){
             return vis.y(d);
+        });
+
+    vis.svg.selectAll("rect")
+        .on("click", function(d,i){
+            console.log(vis.data[i].Age);
+            var value2 = vis.data[i].Gender;
+
+            if (document.getElementById("all-rad").checked != true ) {
+                if (value2 == "Males"){
+                    document.getElementById("mal-rad").checked = true;
+                }
+                else if(value2 == "Females"){
+                    document.getElementById("female-rad").checked = true;
+                }
+            }
+
+            //document.getElementById("age-range").value = vis.data[i].Age;
+
+
         });
 
     bars.exit().remove();
@@ -296,6 +309,7 @@ BarVis.prototype.updateVis = function(genderValue, ageRange){
         });
 
 }
+
 BarVis.prototype.onSelectionChange = function(selectionStart, selectionEnd){
 	var vis = this;
 

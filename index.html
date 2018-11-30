@@ -283,35 +283,39 @@
         				<h2 id="but-label">Select Gender</h2>
         				<div id="radio-buttons">
                   <label class="container2 rad-but"> Male
-          						<INPUT TYPE="Radio" Name="Gender" Value="Males">
+          						<INPUT TYPE="Radio" Name="Gender" Value="Males" id="mal-rad">
           						<span class="checkmark"></span>
           					</label>
           					<label class="container2 rad-but"> Female
-          						<INPUT TYPE="Radio" Name="Gender" Value="Females">
+          						<INPUT TYPE="Radio" Name="Gender" Value="Females" id="female-rad">
           						<span class="checkmark"></span>
           					</label>
           					<label class="container2 rad-but">
-          						<INPUT TYPE="Radio" Name="Gender" Value="All" checked>  All
+          						<INPUT TYPE="Radio" Name="Gender" Value="All" id="all-rad" checked>  All
           						<span class="checkmark"></span>
           					</label>
         				</div>
         				<br/>
 
                 <div></div>
+                      <br>
 
         				<div class = "slidecontainer slider-label">
         					<g>Age selected:</g>
-        					<g id = "age-selected"></g>
+        					<g id = "age-selected" style="color:red;"></g>
+                        <br>
+                          <g>You are in the age range:</g>
+                          <g id = "agerange-selected" style="color:red;"></g>
         				</div>
 
-        				<label class="slider-label" for="age">18</label>
+        				<label class="slider-label" for="age"> 18 </label>
         					<input type="range" id="age-range" name="age"
-        						   min="18" max="66" step ="1" class="slider">
-        				<label class="slider-label" for="age">65+</label>
+        						   min="18" max="65" step ="1" class="slider">
+        				<label class="slider-label" for="age"> 65+ </label>
 
               </div>
 
-              <div class="col-md-6">
+              <div class="col-md-4">
                     <div class="info-text">In Massachusetts in 2014,
                     <g class="info-text2" id="num-info"> _______ </g>
                     of all the deaths of
@@ -327,7 +331,8 @@
 
         		<div class="row">
         				<div class="col-md-6">
-        					<div id="pictovis"></div>
+        					<div id="pictovis">
+                            </div>
         				</div>
         				<div class="col-md-6">
         					<h2>Opioid Related Deaths in 2014</h2>
