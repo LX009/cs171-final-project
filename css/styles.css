@@ -50,6 +50,12 @@
 	margin-top: 5%;
 	border-radius: 15px;
 	border: 2px solid #424242;
+	transition: 0.5s ease;
+}
+
+.half-image:hover {
+	filter: grayscale(0.4);
+	transition: 0.5 ease;
 }
 
 .halftext {
@@ -90,6 +96,13 @@ ul {
 	padding: 10px;
 	border-radius: 10px;
 	background-color: rgba(172, 172, 172, 0.5);
+	opacity: 0.88;
+	transition: 0.5s ease;
+}
+
+.history:hover {
+	opacity: 1;
+	transition: 0.5s ease;
 }
 
 .symptom {
@@ -112,18 +125,17 @@ ul {
 	border-radius: 50%;
 	display:block;
 	border: 2px solid #EEEEEE;
-	opacity: 0.8;
-}
-
-.icon:hover {
-	opacity: 1;
-	transition: 0.5s;
 }
 
 .people {
 	width: 90%;
 	margin: 0 auto;
 	color: #EEEEEE;
+}
+
+.person:hover {
+	opacity: 1;
+	transition: 0.5s ease;
 }
 
 .person {
@@ -135,6 +147,8 @@ ul {
 	margin-right: 10px;
 	border-radius: 10px;
 	background-color: rgba(172, 172, 172, 0.6);
+	opacity: 0.88;
+	transition: 0.5s ease;
 }
 
 .name {
