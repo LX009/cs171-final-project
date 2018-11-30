@@ -1,6 +1,6 @@
 /* Adapted from Luke's Midterm 2 */
 
-#section0, #section3, #section4, #section5 {
+#section0, #section3, #section4, #section5, #section7, #section12 {
 	padding: 0;
 	background-size: cover;
 	background-position: center;
@@ -25,6 +25,14 @@
 	background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.6)), url(../img/smoke.jpg);
 }
 
+#section7 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.6)), url(../img/boston.jpg);
+}
+
+#section12 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.6)), url(../img/harv.jpg);
+}
+
 .intro {
 	text-align: left;
     position: absolute;
@@ -38,9 +46,16 @@
 	filter: grayscale(0.6);
 	padding: 0;
 	width: 90%;
-	margin:0 auto;
+	margin: 0 auto;
+	margin-top: 5%;
 	border-radius: 15px;
 	border: 2px solid #424242;
+	transition: 0.5s ease;
+}
+
+.half-image:hover {
+	filter: grayscale(0.4);
+	transition: 0.5 ease;
 }
 
 .halftext {
@@ -73,25 +88,82 @@ h3 {
 	font-style: italic;
 }
 
+ul {
+	list-style:none;
+}
+
 .history {
 	padding: 10px;
 	border-radius: 10px;
 	background-color: rgba(172, 172, 172, 0.5);
+	opacity: 0.88;
+	transition: 0.5s;
+}
+
+.history:hover {
+	opacity: 1;
+	transition: 0.5s;
 }
 
 .symptom {
 	font-size: 18px;
 	font-weight: 700;
 	margin-top: 20px;
-
 	text-align: center;
-
 	animation: shake 2s infinite; 
 }
 
 .caption {
 	width: 60%;
 	margin: 0 auto;
+}
+
+.icon {
+	width: 120px;
+	height: 120px;
+	margin: 0 auto;
+	border-radius: 50%;
+	display:block;
+	border: 2px solid #EEEEEE;
+}
+
+.people {
+	width: 90%;
+	margin: 0 auto;
+	color: #EEEEEE;
+}
+
+.person:hover {
+	opacity: 1;
+	transition: 0.5s ease;
+}
+
+.person {
+	display: inline-block;
+	width: 20%;
+	padding: 15px;
+	margin: 0 auto;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 10px;
+	background-color: rgba(172, 172, 172, 0.6);
+	opacity: 0.88;
+	transition: 0.5s;
+}
+
+.name {
+	font-size: 24px;
+	font-weight: 400;
+}
+
+.halves {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.small {
+	text-align: center;
+	font-size: 24px;
 }
 
 /* Adapted from https://www.w3schools.com/howto/howto_css_shake_image.asp */
