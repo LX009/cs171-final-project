@@ -97,7 +97,7 @@ PictoVis.prototype.wrangleData = function(){
     else
         ageRange = 10;
 
-    if (genderValue == "Females"){
+    if (genderValue == "Males"){
         console.log("test");
         console.log(ageRange);
         ageRange = ageRange + 1;
@@ -105,15 +105,22 @@ PictoVis.prototype.wrangleData = function(){
 
     console.log(ageRange);
 
+    // EDITS HERE!! ****************************
     if (genderValue != "All"){
         console.log("entered, but not");
         document.getElementById("gender-info").innerHTML = genderValue;
         document.getElementById("num-info").innerHTML = vis.data[ageRange].B + "%";
+        document.getElementById("death-info").innerHTML = vis.data[ageRange].A;
     }
     else {
 
         document.getElementById("gender-info").innerHTML = "residents";
         document.getElementById("num-info").innerHTML = vis.data[ageRange].E + "%";
+        document.getElementById("death-info").innerHTML = +vis.data[ageRange].A + +vis.data[ageRange+1].A ;
+        // console.log("tester info");
+        // console.log(ageRange);
+        // console.log(vis.data[ageRange]);
+        // console.log(vis.data);
 
     }
 
@@ -122,7 +129,7 @@ PictoVis.prototype.wrangleData = function(){
 
     document.getElementById("agerange-selected").innerHTML = vis.data[ageRange].Age;
 
-    ////////
+    // EDITS HERE!! ****************************
 
     vis.updateVis(ageRange, genderValue);
 }
@@ -182,34 +189,50 @@ PictoVis.prototype.updateVis = function(ageRange, genderValue){
         })
         .classed("iconPlain",true);
 
+
+    //********** LEGEND **********
+
     vis.svg
         .append("use")
         .attr("xlink:href","#iconCustom")
         .attr("x", -50)
         .attr("y",22)
-        .attr("fill", "black")
+        .attr("fill", "red")
         .attr("class","legend")
         .classed("iconPlain",true);
 
 
     vis.svg
         .append("text")
-        .attr("x", -37)
+        .attr("x", -47)
         .attr("y", 70)
-        .text("=");
+        .text("= 1%");
 
-    var legend = vis.svg;
-
-    legend.append("text")
-        .attr("class","legend")
-        .merge(legend)
-        .attr("x", -50)
+    vis.svg
+        .append("text")
+        .attr("x", -47)
         .attr("y", 100)
-        .text(function(){
-            return Math.round(vis.data[ageRange].D/100) + " ppl";
-        });
+        .text("of total");
 
-    legend.exit().remove();
+    vis.svg
+        .append("text")
+        .attr("x", -47)
+        .attr("y", 130)
+        .text("deaths");
+
+    vis.svg
+        .append("text")
+        .attr("x", -47)
+        .attr("y", 160)
+        .text("related to");
+
+    vis.svg
+        .append("text")
+        .attr("x", -47)
+        .attr("y", 190)
+        .text("Opioids");
+
+
 
 }
 

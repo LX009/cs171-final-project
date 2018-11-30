@@ -113,7 +113,7 @@ BarVis.prototype.wrangleData = function(){
     peopleByAge.forEach(function(age,i){
            // console.log(age["values"][0].A);
 
-            total = +age["values"][0].A + +age["values"][0].A;
+            total = +age["values"][0].A + +age["values"][1].A;
 
             // add number of people for each age category for males and females
             ageCount[counter] = total;
@@ -189,7 +189,7 @@ BarVis.prototype.wrangleData = function(){
     else
         ageRange = 10;
 
-    if (genderValue == "Females"){
+    if (genderValue == "Males"){
         console.log("test");
         console.log(ageRange);
         ageRange = ageRange + 1;
@@ -222,8 +222,15 @@ BarVis.prototype.updateVis = function(genderValue, ageRange){
     console.log(vis.displayData);
     console.log(vis.domain);
 
+    if (genderValue == "All")
+    {
+        vis.y.domain([0, 900]);
+    }
+    else
+        vis.y.domain([0, 600]);
     // Update domains
-    vis.y.domain([0, d3.max(vis.displayData)]);
+
+   // vis.y.domain([0, d3.max(vis.displayData)]);
     vis.x.domain(d3.range(0,vis.domain));
 
     var bars = vis.svg.selectAll(".bar")
