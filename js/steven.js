@@ -93,13 +93,26 @@ d3.csv("data/overdose-death-history.csv", function(error, data) {
       .style("stroke-width", "2px")
       .attr("d", line_chart_synthetic);
 
-  // Add a determine line:
+  // Add a determine marker:
   line_chart_svg.append("path")
     .attr("class", "marker")
     .attr("d", "M " + line_chart_x(line_chart_parseTime(2016)) + " " + line_chart_height + " L " + line_chart_x(line_chart_parseTime(2016)) + " " + 0)
     .style("stroke", "grey")
     .style("fill", "none")
     .style("stroke-dasharray", ("2, 2"))
+
+  line_chart_svg.append("text")
+    .attr("class", "marker-text")
+    .text(function () {
+      return "2016";
+    })
+    .attr("x", function (d) {
+      return line_chart_x(line_chart_parseTime(2016));
+    })
+    .attr("y", -5)
+    .attr("font-family", "serif")
+    .attr("font-size", "12px")
+    .attr("text-anchor", "middle");
 
   // Add the X Axis
   line_chart_svg.append("g")
@@ -130,7 +143,7 @@ d3.csv("data/overdose-death-history.csv", function(error, data) {
   // Add legend
   line_chart_svg.append("g")
     .attr("class", "line-chart-legend")
-    .attr("transform", "translate(20,20)");
+    .attr("transform", "translate(20,-20)");
 
   line_chart_svg.select(".line-chart-legend")
     .call(line_chart_legend);
@@ -159,13 +172,14 @@ var national_map_color = d3.scaleLinear()
   .range(["lightgrey", "red"]);
 
 var national_map_legend = d3.legendColor()
+  .title("Deaths per 100,000 People")
   .shapeWidth(national_map_width / 5)
   .orient("horizontal")
   .scale(national_map_color);
 
 var mapData;
 
-var usa;
+var usaSteven;
 
 queue()
   .defer(d3.csv, "data/us-death-rates.csv")
@@ -237,9 +251,9 @@ function wrangleMapData(error, values, map, conversion) {
         });
     });
 
-  usa = temp;
+  usaSteven = temp;
 
-  console.log(usa);
+  console.log(usaSteven);
 
   createMap();
 }
@@ -248,7 +262,7 @@ function createMap() {
   national_map_color.domain([0, 50]);
 
   national_map_svg.selectAll("path")
-        .data(usa)
+        .data(usaSteven)
         .enter()
         .append("path")
         .attr("d", national_map_path)
@@ -287,4 +301,25 @@ function updateNationalVis() {
   line_chart_svg.selectAll(".marker")
     .transition()
     .attr("d", "M " + line_chart_x(line_chart_parseTime(year)) + " " + line_chart_height + " L " + line_chart_x(line_chart_parseTime(year)) + " " + 0)
+
+  line_chart_svg.selectAll(".marker-text")
+    .text(function () {
+      return year;
+    })
+    .transition()
+    .attr("x", function () {
+      return line_chart_x(line_chart_parseTime(year));
+    });
+
+  if (year < 2006) {
+    line_chart_svg.selectAll(".line-chart-legend")
+      .transition()
+      .attr("transform", "translate(220, -20)");
+  }
+
+  else {
+    line_chart_svg.selectAll(".line-chart-legend")
+      .transition()
+      .attr("transform", "translate(20, -20)");
+  }
 }
