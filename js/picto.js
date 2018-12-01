@@ -23,7 +23,7 @@ PictoVis.prototype.initVis = function(){
     var vis = this;
     //placeholder div for jquery slider
 
-    vis.margin = { top: 20, right: 20, bottom: 200, left: 50 };
+    vis.margin = { top: 0, right: 20, bottom: 200, left: 150 };
 
     vis.width = 550 - vis.margin.left - vis.margin.right,
         vis.height = 650 - vis.margin.top - vis.margin.bottom;
@@ -155,7 +155,7 @@ PictoVis.prototype.updateVis = function(ageRange, genderValue){
 
     //horizontal and vertical spacing between the icons
     var hBuffer = 40;
-    var wBuffer = 40;
+    var wBuffer = 35;
 
     //generate a d3 range for the total number of required elements
     var myIndex = d3.range(numCols*numRows);
