@@ -210,25 +210,25 @@ PictoVis.prototype.updateVis = function(ageRange, genderValue){
 
     vis.svg
         .append("text")
-        .attr("x", -47)
+        .attr("x", -57)
         .attr("y", 100)
         .text("of total");
 
     vis.svg
         .append("text")
-        .attr("x", -47)
+        .attr("x", -57)
         .attr("y", 130)
         .text("deaths");
 
     vis.svg
         .append("text")
-        .attr("x", -47)
+        .attr("x", -57)
         .attr("y", 160)
         .text("related to");
 
     vis.svg
         .append("text")
-        .attr("x", -47)
+        .attr("x", -57)
         .attr("y", 190)
         .text("Opioids");
 
