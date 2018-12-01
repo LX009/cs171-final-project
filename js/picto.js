@@ -23,7 +23,7 @@ PictoVis.prototype.initVis = function(){
     var vis = this;
     //placeholder div for jquery slider
 
-    vis.margin = { top: 0, right: 20, bottom: 100, left: 250};
+    vis.margin = { top: 0, right: 20, bottom: 0, left: 250};
 
     vis.width = 550 - vis.margin.left - vis.margin.right,
         vis.height = 400 - vis.margin.top - vis.margin.bottom;
@@ -33,7 +33,7 @@ PictoVis.prototype.initVis = function(){
     // SVG drawing area
     vis.svg = d3.select("#" + vis.parentElement).append("svg")
         .attr("width", vis.width + vis.margin.left + vis.margin.right)
-        .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
+        .attr("height", vis.height - 50)
         .append("g")
         .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")")
         .attr("viewBox","0 0 100 100");
@@ -181,9 +181,9 @@ PictoVis.prototype.updateVis = function(ageRange, genderValue){
         })
         .attr("fill",function(d,i){
             if(i<vis.data[ageRange].B && genderValue !="All")
-                return "red";
+                return "#842E2E";
             if(i<vis.data[ageRange].E && genderValue =="All")
-                return "red";
+                return "#842E2E";
             else
                 return "black";
         })
@@ -197,7 +197,7 @@ PictoVis.prototype.updateVis = function(ageRange, genderValue){
         .attr("xlink:href","#iconCustom")
         .attr("x", -50)
         .attr("y",22)
-        .attr("fill", "red")
+        .attr("fill", "#842E2E")
         .attr("class","legend")
         .classed("iconPlain",true);
 

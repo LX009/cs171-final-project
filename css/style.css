@@ -17,7 +17,12 @@ h1 {
 }
 
 .state {
-	fill: #9E9E9E;
+	fill: #BDBDBD;
+	opacity: 0.7;
+}
+
+.state-value:hover {
+	fill: blue;
 }
 
 /* FROM HW5 */

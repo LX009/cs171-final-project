@@ -1,4 +1,37 @@
-/* Adapted from Luke's Midterm 2 */
+/* Luke */
+
+a:not(.btn) {
+	color: #3A79D1 !important;
+}
+
+a:not(.btn):hover {
+	color: #2D5C9E !important;
+}
+
+.state {
+	fill: #b5b5b5;
+	opacity: 0.7;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+	box-sizing: border-box;
+	display: inline;
+	font-size: 10px;
+	width: 100%;
+	line-height: 1;
+	color: rgba(60, 60, 60, 0.8);
+	content: "\25BC";
+	position: absolute;
+	text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+	margin: -1px 0 0 0;
+	top: 100%;
+	left: 0;
+}
 
 #section0, #section3, #section4, #section5, #section7, #section12 {
 	padding: 0;
@@ -212,8 +245,7 @@ p.headerCaption{
 }
 
 
-
-/* Custom CSS
+/* Custom CSS from fullPage.js
  * --------------------------------------- */
 #menu li {
 	display:inline-block;
@@ -260,8 +292,6 @@ p.headerCaption{
 .fp-tooltip{
 	color: #757575 !important;
 }
-
-
 
 #binaryMaps_maps {
     width: 100%;
@@ -355,9 +385,6 @@ p.headerCaption{
   SECTIONS
 ============================================================ */
 
-
-
-
 .wrapper {
     background-color: #000000; }
 
@@ -403,4 +430,83 @@ div.tooltip {
     pointer-events: none;
 }
 
+
+=======
+/* FROM HW5 */
+/*********************/
+/*  TOOLTIP OVERLAY  */
+/*********************/
+
+.tooltip-title {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: 600;
+}
+
+.d3-tip {
+	line-height: 1;
+	padding: 12px;
+	background: rgba(60, 60, 60, 0.8);
+	color: #fff;
+	border-radius: 2px;
+}
+
+/*SLIDERS AND RADIO BUTTON VICKY
+/*Radio Button CSS */
+.rad-but {
+  float:left;
+	padding-right:20px;
+}
+
+/*Slide Made Edits herer*/
+
+.slidecontainer {
+	width: 100%;
+}
+
+.slidecontainer-national {
+	width: 30%;
+	display: block;
+	margin: auto;
+}
+
+.slider {
+	-webkit-appearance: none;
+	width: 70%;
+	height: 25px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+	margin:10px;
+	margin-top:20px;
+	border-radius: 10%;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+}
+
+.slider:hover {
+	opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #254c54;
+	cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	background: #4CAF50;
+	cursor: pointer;
+}
+
+.rad-but {
+  float:left;
+	padding-right:20px;
+}
 

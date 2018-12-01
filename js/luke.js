@@ -5,15 +5,16 @@
 // Set up svgLuke
 var marginLuke = {top: 160, right: 50, bottom: 50, left: 100};
 
-var widthLuke = 1000 - marginLuke.left - marginLuke.right,
-    heightLuke = 600 - marginLuke.top - marginLuke.bottom;
+var widthLuke = 800 - marginLuke.left - marginLuke.right,
+    heightLuke = 440 - marginLuke.top - marginLuke.bottom;
 
 var svgLuke = d3.select("#symbol-map-area").append("svg")
     .attr("width", widthLuke + marginLuke.left + marginLuke.right)
     .attr("height", heightLuke + marginLuke.top + marginLuke.bottom);
 
 var projectionLuke = d3.geoAlbersUsa()
-    .translate([widthLuke / 2, heightLuke / 1.5]);
+    .translate([400, heightLuke])
+    .scale(800);
 
 var pathLuke = d3.geoPath()
     .projection(projectionLuke);
@@ -61,6 +62,7 @@ function manageData(error, data1, data2, data3, data4) {
     data1.forEach(function(d){
         d.Population = +d.Population.replace(/,/g, '');
         d.Deaths = +d.Deaths.replace(/,/g, '');
+        d.DeathsPerPop = d.Deaths / d.Population;
 
         data3.forEach(function(e) {
             if (d.Abbrev == e.Abbrev) {
@@ -83,6 +85,7 @@ function manageData(error, data1, data2, data3, data4) {
            if (d.id == e.ID) {
                d.Deaths = e.Deaths;
                d.Population = e.Population;
+               d.DeathsPerPop = d.Deaths / d.Population;
            }
         });
     });
@@ -90,8 +93,6 @@ function manageData(error, data1, data2, data3, data4) {
     usaLuke = temp;
 
     // use data2 to map US
-    // console.log(usaLuke);
-
     createVisualization();
 }
 
@@ -99,20 +100,20 @@ function createVisualization() {
 
     var val = d3.select("#binary").property("value");
 
-    console.log(val);
-
     colorLuke.domain([
         d3.min(usaLuke, function(d) { return d[val]; }), d3.max(usaLuke, function(d) { return d[val]; })
     ]);
 
     circleRadius.domain([
-        d3.min(allDataLuke, function(d) { return d[val]; }), d3.max(allDataLuke, function(d) { return d[val]; })
+        d3.min(usaLuke, function(d) { return d[val]; }), d3.max(usaLuke, function(d) { return d[val]; })
     ]);
 
     if (val == "Deaths") {
-        circleRadius.range([10, 30]);
+        circleRadius.range([5, 20]);
+    } else if (val == "Population"){
+        circleRadius.range([5, 20]);
     } else {
-        circleRadius.range([5, 45]);
+        circleRadius.range([5, 20]);
     }
 
     var state = svgLuke.selectAll("path")
@@ -121,20 +122,13 @@ function createVisualization() {
         .append("path")
         .attr("d", pathLuke)
         .attr("class", "state");
-        // .attr("fill", function (d) {
-        //     if (isNaN(d.Deaths)) {
-        //         return "#f7fbff";
-        //     } else {
-        //         return colorLuke(d.Deaths);
-        //     }
-        // });
 
     // Tooltip, as seen on https://github.com/VACLab/d3-tip
     var tool_tipLuke = d3.tip()
         .attr("class", "d3-tip")
         .offset([-8, 0])
         .html(function(d) {
-            return "<b>" + d.State + "</b><br/><br/>" + "Opioid Related Deaths: " + d.Deaths + "<br/><br/>" + "Population: " + d.Population;
+            return "<b>" + d.State + "</b><br/><br/>" + "Opioid Related Deaths: " + d.Deaths + "<br/><br/>" + "Population: " + d.Population + "<br/><br/>" + "Deaths per capita: " + d3.format(".4r")(d.DeathsPerPop);
         });
     svgLuke.call(tool_tipLuke);
 
@@ -146,30 +140,58 @@ function createVisualization() {
         .append("circle")
         .attr("class", "state-value")
         .merge(circle)
-        .on("mouseover", tool_tipLuke.show)
-        .on("mouseout", tool_tipLuke.hide)
+        // .on("mouseover", tool_tipLuke.show)
+        .on("mouseover", function(d) {
+            tool_tipLuke.show(d);
+            d3.select(this)
+            .style("fill", function () {
+                if (val == "DeathsPerPop") {
+                    return "#B74040";
+                } else if (val == "Population") {
+                    return "#3A79D1";
+                } else {
+                    return "#85B1BC";
+                }
+            });
+        })
+        // .on("mouseout", tool_tipLuke.hide)
+        .on("mouseout", function(d) {
+            tool_tipLuke.hide(d);
+            d3.select(this)
+            .style("fill", function () {
+                if (val == "DeathsPerPop") {
+                    return "#842E2E";
+                } else if (val == "Population") {
+                    return "#2D5C9E";
+                } else {
+                    return "#618189";
+                }
+            })
+        })
         .transition()
         .duration(600)
         .style("opacity", 0.4)
         .attr("r", function(d) {
             return circleRadius(d[val]);
         })
-
-        // .append("rect")
-        // .attr("class", "state-value")
-        // .merge(circle)
-        // .transition()
-        // .duration(600)
-        // .style("opacity", 0.4)
-        // .attr("height", function(d) {
-        //     return circleRadius(d[val]);
-        // })
-        // .attr("width", function(d) {
-        //     return circleRadius(d[val]);
-        // })
-
-        .attr("fill", "#651FFF")
-        .attr("stroke", "#311B92")
+        .style("fill", function () {
+            if (val == "DeathsPerPop") {
+                return "#842E2E";
+            } else if (val == "Population") {
+                return "#2D5C9E";
+            } else {
+                return "#618189";
+            }
+        })
+        .attr("stroke", function () {
+            if (val == "DeathsPerPop") {
+                return "#511C1C";
+            } else if (val == "Population") {
+                return "#1D3E6B";
+            } else {
+                return "#3D5156";
+            }
+        })
         .attr("transform", function(d) {
             return "translate(" + projectionLuke([d.long, d.lat]) + ")";
         })
@@ -181,26 +203,44 @@ function createVisualization() {
 
     // Legend
     svgLuke.append("circle")
-        .attr("fill", "#651FFF")
-        .attr("stroke", "#311B92")
+        .attr("fill", function () {
+            if (val == "DeathsPerPop") {
+                return "#842E2E";
+            } else if (val == "Population") {
+                return "#2D5C9E";
+            } else {
+                return "#618189";
+            }
+        })
+        .attr("stroke", function () {
+            if (val == "DeathsPerPop") {
+                return "#511C1C";
+            } else if (val == "Population") {
+                return "#1D3E6B";
+            } else {
+                return "#3D5156";
+            }
+        })
         .style("opacity", 0.8)
         .attr("r", 15)
-        .attr("cx", (widthLuke / 2) - 25)
-        .attr("cy", 20)
+        .attr("cx", 370 - 10)
+        .attr("cy", 30)
         .attr("class", "legend-marker");
 
     svgLuke.append("text")
         .attr("class", "legend-text")
         .attr("text-anchor", "start")
-        .attr("x", (widthLuke / 2) + 4)
-        .attr("y", 20 + 5);
+        .attr("x", 370 + 10)
+        .attr("y", 30 + 5);
 
     svgLuke.selectAll(".legend-text")
         .text(function() {
             if (val == "Deaths") {
                 return d3.format(".2r")(circleRadius.invert(15)) + " deaths";
-            } else {
+            } else if (val == "Population"){
                 return d3.format(".2s")(circleRadius.invert(15)) + " people";
+            } else {
+                return d3.format(".4r")(circleRadius.invert(15)) + " deaths per capita";
             }
         });
 
