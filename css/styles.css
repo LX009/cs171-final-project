@@ -365,7 +365,8 @@ p.headerCaption{
         position: relative; } }
 
 #binaryMaps_legend.vis-legend {
-    max-width: 100%; }
+    margin-left: 25%;
+    max-width: 50%; }
 
 .svg-container {
     display: inline-block;
