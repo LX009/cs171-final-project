@@ -245,20 +245,20 @@ BarVis.prototype.updateVis = function(genderValue, ageRange){
             console.log(vis.data[i].ID);
             console.log(ageRange);
             if (vis.data[i].Gender == genderValue && vis.data[i].Age == vis.data[ageRange].Age && genderValue != "All"){
-                return "orange";
+                return "#CEA059";
             }
             if (vis.data[i].ID == ageRange/2 + 1 && genderValue == "All"){
                 color = 1;
-                return "orange";
+                return "#CEA059";
             }
             if(vis.data[i].Gender =="Males" && genderValue != "All"){
-                return "blue";
+                return "#7399A3";
             }
             if(vis.data[i].Gender =="Females" && genderValue != "All"){
-                return "purple";
+                return "#85B1BC";
             }
             else
-                return "green";
+                return "#618189";
         })
         .attr("width", vis.x.bandwidth())
         .attr("height", function(d){

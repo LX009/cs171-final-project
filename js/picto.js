@@ -181,9 +181,9 @@ PictoVis.prototype.updateVis = function(ageRange, genderValue){
         })
         .attr("fill",function(d,i){
             if(i<vis.data[ageRange].B && genderValue !="All")
-                return "red";
+                return "#842E2E";
             if(i<vis.data[ageRange].E && genderValue =="All")
-                return "red";
+                return "#842E2E";
             else
                 return "black";
         })
@@ -197,7 +197,7 @@ PictoVis.prototype.updateVis = function(ageRange, genderValue){
         .attr("xlink:href","#iconCustom")
         .attr("x", -50)
         .attr("y",22)
-        .attr("fill", "red")
+        .attr("fill", "#842E2E")
         .attr("class","legend")
         .classed("iconPlain",true);
 
