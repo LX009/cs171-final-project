@@ -31,7 +31,7 @@ var f = d3.format(".1f");
 var pathJung = d3.geoPath().projection(projectionJung);
 var palette = d3.scaleThreshold()
     .domain([-0.1, 0.1, 2.1, 6.1, 17.1, Infinity])
-    .range(["DBE4E6", "#AFC3C8", "#7499A3", "#4F6970", "#5F767D"]);
+    .range(["DBE4E6", "#AFC3C8", "#7A9AA3", "#59737A", "#465E66"]);
 
 
 function visualize(error, states, data) {
@@ -90,7 +90,7 @@ function createMassVisualization(wrapper, geo, data) {
 }
 
 var opChgScale = d3.scaleThreshold().domain([0.1, 2.1, 6.1, 17.1, Infinity])
-    .range(["DBE4E6", "#AFC3C8", "#7499A3", "#678a91", "#497A7D", "#4c656b"]);
+    .range(["DBE4E6", "#AFC3C8", "#7A9AA3", "#59737A", "#465E66"]);
 opChgScale.domainStrings = function() {
     return (['0', '0-2.1%', '2.1-6.1%', '6.1-17.1%', '> 17.1%']);
 };
