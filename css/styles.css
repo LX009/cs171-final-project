@@ -315,6 +315,12 @@ p.headerCaption{
 	width: 100%;
 }
 
+.slidecontainer-national {
+	width: 30%;
+	display: block;
+	margin: auto;
+}
+
 .slider {
 	-webkit-appearance: none;
 	width: 70%;
