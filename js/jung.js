@@ -31,7 +31,7 @@ var f = d3.format(".1f");
 var pathJung = d3.geoPath().projection(projectionJung);
 var palette = d3.scaleThreshold()
     .domain([-0.1, 0.1, 2.1, 6.1, 17.1, Infinity])
-    .range(["DBE4E6", "#AFC3C8", "#7499A3", "#618189", "#5F767D"]);
+    .range(["DBE4E6", "#AFC3C8", "#7499A3", "#4F6970", "#5F767D"]);
 
 
 function visualize(error, states, data) {
@@ -90,7 +90,7 @@ function createMassVisualization(wrapper, geo, data) {
 }
 
 var opChgScale = d3.scaleThreshold().domain([0.1, 2.1, 6.1, 17.1, Infinity])
-    .range(["DBE4E6", "#AFC3C8", "#7499A3", "#618189", "#5F767D", "#3D5156"]);
+    .range(["DBE4E6", "#AFC3C8", "#7499A3", "#678a91", "#497A7D", "#4c656b"]);
 opChgScale.domainStrings = function() {
     return (['0', '0-2.1%', '2.1-6.1%', '6.1-17.1%', '> 17.1%']);
 };
@@ -100,7 +100,7 @@ generateLegend_map_sub(opChgScale, 'binaryMaps_legend', 'Rate per 100,000 People
 function generateLegend_map_sub(scale, szDivId, szCaption) {
 
     var legendHeight = 50,
-        legendWidth = '90%';
+        legendWidth = '50%';
 
     var $maps_sub_svg = d3.select('#' + szDivId).append("svg")
         .attr("width", legendWidth)
