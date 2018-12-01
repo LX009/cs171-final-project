@@ -2,7 +2,7 @@
 
 The site may be found [here](https://lx009.github.io/cs171-final-project/).
 
-A screencast demonstrating the site may be found [here](www.google.com).
+A screencast demonstrating the site may be found [here](https://drive.google.com/file/d/1JVR97DoZi6ljwqj8OHqaATS9OmDrpyvG/view?usp=sharing).
 
 This final project directory consists of the following:
 
