@@ -60,14 +60,33 @@
     </header>
 
     <section id="1" data-aos="zoom-out-up">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2>Everyday, more than 115 Americans will die from an opioid overdose.</h2>
-            <p>The Centers for Disease Control and Prevention estimates that prescription opioid misuse in the United States costs <b>$78.5 billion a year</b>, including the costs of healthcare, lost productivity, addiction treatment, and criminal justice involvement.</p>
-          </div>
+        <div class="section" id="section8">
+            <div class="vis-intro">
+                <h2>The Toll on Masssachusetts</h2>
+                <p class="caption">
+                    Opioids have proliferated rapidly since the early 2000s. In 2013-14, opioid-related deaths occured in <b>two-thirds of MA cities and towns</b>, leading then-Governor Deval Patrick to declare a <a href="https://www.publichealthwm.org/application/files/5115/1568/7932/Public_Health_Issue_Brief_October_2015_Opioid_Abuse.pdf"><b>public health emergency</b></a>.
+                </p>
+                <p class="caption mt-2"><i>Select time-frames to explore the epidemic's spread.</i></p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <h2>% Deaths by county</h2>
+                        <div id="binaryMaps" data-active-date="2005" style="padding-bottom: 5%;" role="img" aria-label="Three maps showing opioid-related deaths in Massachusetts in 5-year intervals from 2001 to 2015.">
+
+                            <label class="radio" style="margin:5px;" ><input type="radio" class="js-toggle-binary-map active" data-date="2005" name="optradio" checked> 2001 - 2005 </label>
+                            <label class="radio" style="margin:5px;"><input type="radio" class="js-toggle-binary-map" data-date="2010" name="optradio"> 2006 - 2010 </label>
+                            <label class="radio" style="margin:5px;"><input type="radio" class="js-toggle-binary-map" data-date="2015" name="optradio"> 2011 - 2015 </label>
+
+                            <div id="binaryMaps_legend" class="vis-legend"></div>
+                            <div id="binaryMaps_maps"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-      </div>
     </section>
 
     <section id="christie-1">
