@@ -1,5 +1,12 @@
 /* Luke */
 
+a:not(.btn) {
+	color: #3A79D1 !important;
+}
+
+a:not(.btn):hover {
+	color: #2D5C9E !important;
+}
 
 .state {
 	fill: #b5b5b5;
