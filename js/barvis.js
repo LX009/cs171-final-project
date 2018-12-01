@@ -23,15 +23,15 @@ BarVis.prototype.initVis = function(){
     var vis = this;
     console.log(vis.data[1]);
 
-    vis.margin = { top: 30, right: 20, bottom: 100, left: 50 };
+    vis.margin = { top: 30, right: 20, bottom: 0, left: 50 };
 
     vis.width = $("#" + vis.parentElement).width() - vis.margin.left - vis.margin.right,
-        vis.height = 500 - vis.margin.top - vis.margin.bottom;
+        vis.height = 450 - vis.margin.top - vis.margin.bottom;
 
     // SVG drawing area
     vis.svg = d3.select("#" + vis.parentElement).append("svg")
         .attr("width", vis.width + vis.margin.left + vis.margin.right)
-        .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
+        .attr("height", vis.height-20)
         .append("g")
         .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ") scale(0.7 0.7)");
 
