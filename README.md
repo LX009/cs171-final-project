@@ -63,7 +63,7 @@ This final project directory consists of the following:
       * steven - implements line chart - historical map visualization
       * jung - implements Massachusetts map visualization
       * vicky - implements bar chart - pictograph visualization
-      * whatsbeingdone - implements button clicking for purpose
+      * whatsbeingdone - implements button clicking for efforts to fight the crisis
 
 * Files
   * index.html: the website itself
