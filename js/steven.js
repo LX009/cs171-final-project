@@ -155,14 +155,14 @@ d3.csv("data/overdose-death-history.csv", function(error, data) {
 var national_map_margin = {top: 30, right: 20, bottom: 30, left: 50};
 
 var national_map_width = $("#map").width() - national_map_margin.left - national_map_margin.right,
-    national_map_height = 500 - national_map_margin.top - national_map_margin.bottom;
+    national_map_height = 400 - national_map_margin.top - national_map_margin.bottom;
 
 var national_map_svg = d3.select("#map").append("svg")
     .attr("width", national_map_width + national_map_margin.left + national_map_margin.right)
     .attr("height", national_map_height + national_map_margin.top + national_map_margin.bottom);
 
 var national_map_projection = d3.geoAlbersUsa()
-    .translate([national_map_width / 2, national_map_height / 2])
+    .translate([national_map_width / 2, national_map_height / 1.5])
     .scale(600);
 
 var national_map_path = d3.geoPath()
@@ -173,7 +173,7 @@ var national_map_color = d3.scaleLinear()
 
 var national_map_legend = d3.legendColor()
   .title("Deaths per 100,000 People")
-  .shapeWidth(national_map_width / 5)
+  .shapeWidth((national_map_width / 5) - 15)
   .orient("horizontal")
   .scale(national_map_color);
 
