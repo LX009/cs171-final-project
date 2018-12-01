@@ -19,7 +19,7 @@ var line_chart_y = d3.scaleLinear()
 
 var line_legend_scale = d3.scaleOrdinal()
   .domain(["Prescription", "Heroin", "Synthetic Opioids"])
-  .range(["#3A79D1", "#B74040", "#FFC4D6"]);
+  .range(["#3A79D1", "#B74040", "#FFC46D"]);
 
 // define the 1st line
 var line_chart_prescription = d3.line()
@@ -89,7 +89,7 @@ d3.csv("data/overdose-death-history.csv", function(error, data) {
       .datum(data)
       .attr("class", "line")
       .style("fill", "none")
-      .style("stroke", "#FFC4D6")
+      .style("stroke", "#FFC46D")
       .style("stroke-width", "2px")
       .attr("d", line_chart_synthetic);
 
