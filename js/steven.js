@@ -3,7 +3,7 @@
 // LINE CHART VARIABLES AND IMPLEMENTATION
 
 // set the dimensions and margins of the graph
-var line_chart_margin = {top: 20, right: 20, bottom: 30, left: 50},
+var line_chart_margin = {top: 100, right: 20, bottom: 30, left: 50},
     line_chart_width = $("#line").width() - line_chart_margin.left - line_chart_margin.right,
     line_chart_height = 400 - line_chart_margin.top - line_chart_margin.bottom;
 
@@ -130,7 +130,7 @@ d3.csv("data/overdose-death-history.csv", function(error, data) {
     .attr("font-size", "12px")
     .attr("text-anchor", "end")
     .attr("x", -5)
-    .attr("y", 10);
+    .attr("y", -5);
 
   line_chart_svg.append("text")
     .text("Year")
@@ -143,7 +143,7 @@ d3.csv("data/overdose-death-history.csv", function(error, data) {
   // Add legend
   line_chart_svg.append("g")
     .attr("class", "line-chart-legend")
-    .attr("transform", "translate(20,-20)");
+    .attr("transform", "translate(20,-100)");
 
   line_chart_svg.select(".line-chart-legend")
     .call(line_chart_legend);
@@ -155,7 +155,7 @@ d3.csv("data/overdose-death-history.csv", function(error, data) {
 var national_map_margin = {top: 30, right: 20, bottom: 30, left: 50};
 
 var national_map_width = $("#map").width() - national_map_margin.left - national_map_margin.right,
-    national_map_height = 400 - national_map_margin.top - national_map_margin.bottom;
+    national_map_height = 500 - national_map_margin.top - national_map_margin.bottom;
 
 var national_map_svg = d3.select("#map").append("svg")
     .attr("width", national_map_width + national_map_margin.left + national_map_margin.right)
@@ -163,7 +163,7 @@ var national_map_svg = d3.select("#map").append("svg")
 
 var national_map_projection = d3.geoAlbersUsa()
     .translate([national_map_width / 2, national_map_height / 2])
-    .scale(550);
+    .scale(600);
 
 var national_map_path = d3.geoPath()
     .projection(national_map_projection);
@@ -311,15 +311,4 @@ function updateNationalVis() {
       return line_chart_x(line_chart_parseTime(year));
     });
 
-  if (year < 2006) {
-    line_chart_svg.selectAll(".line-chart-legend")
-      .transition()
-      .attr("transform", "translate(220, -20)");
-  }
-
-  else {
-    line_chart_svg.selectAll(".line-chart-legend")
-      .transition()
-      .attr("transform", "translate(20, -20)");
-  }
 }
