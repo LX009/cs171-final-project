@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>OLD</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <!--AOS scrolling library-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vickystyle.css">
+    <link rel="stylesheet" href="css/main.css">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">The Opiate Crisis in America</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#1">Intro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#2">Situation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#3">Statistics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#6">Closer to Home</a>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="bg-primary text-white" data-aos="zoom-out-up">
+      <div class="container text-center">
+        <h1>Killed by Pain</h1>
+        <p class="lead">The Data of the Opiate Crisis in America</p>
+      </div>
+    </header>
+
+    <section id="1" data-aos="zoom-out-up">
+        <div class="section" id="section8">
+            <div class="vis-intro">
+                <h2>The Toll on Masssachusetts</h2>
+                <p class="caption">
+                    Opioids have proliferated rapidly since the early 2000s. In 2013-14, opioid-related deaths occured in <b>two-thirds of MA cities and towns</b>, leading then-Governor Deval Patrick to declare a <a href="https://www.publichealthwm.org/application/files/5115/1568/7932/Public_Health_Issue_Brief_October_2015_Opioid_Abuse.pdf"><b>public health emergency</b></a>.
+                </p>
+                <p class="caption mt-2"><i>Select time-frames to explore the epidemic's spread.</i></p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <h2>% Deaths by county</h2>
+                        <div id="binaryMaps" data-active-date="2005" style="padding-bottom: 5%;" role="img" aria-label="Three maps showing opioid-related deaths in Massachusetts in 5-year intervals from 2001 to 2015.">
+
+                            <label class="radio" style="margin:5px;" ><input type="radio" class="js-toggle-binary-map active" data-date="2005" name="optradio" checked> 2001 - 2005 </label>
+                            <label class="radio" style="margin:5px;"><input type="radio" class="js-toggle-binary-map" data-date="2010" name="optradio"> 2006 - 2010 </label>
+                            <label class="radio" style="margin:5px;"><input type="radio" class="js-toggle-binary-map" data-date="2015" name="optradio"> 2011 - 2015 </label>
+
+                            <div id="binaryMaps_legend" class="vis-legend"></div>
+                            <div id="binaryMaps_maps"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="christie-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mx-auto" data-aos="zoom-out-left">
+            <h2>Meet Christie</h2>
+            <p class="lead">a 36-year old from Springfield, MA.</p><br>
+            <p>She is among millions of American who became addicted to opioids in the late 1990s...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="2" class="bg-light" data-aos="zoom-out-up">
+      <div class="container">
+        <div class="row">
+            <h2>Opioid Related Deaths in the United States</h2>
+            <div class="container">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <select class="form-control" id="binary">
+                            <option value="Deaths">Deaths</option>
+                            <option value="Population">Population</option>
+                            <option value="DeathsPerPop">Severity</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="container">
+                <div id="symbol-map-area"></div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="christie-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mx-auto" data-aos="zoom-out-left">
+            <h2>Christie had her first pill of Oxycontin in 1998...</h2>
+            <p class="lead">when she was 18. She was in the car accident that left bulging discs in her lower back. Her family doctor prescribed it when physical therapy did not help.</p><br>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mx-auto" data-aos="zoom-out-right">
+            <h2>Image</h2>
+            <p class="lead"></p>
+          </div>
+          <div class="col-lg-6 mx-auto" data-aos="zoom-out-left">
+            <h2>What went wrong?</h2>
+            <p class="lead">The opioid crisis on a national scale can be traced in three major waves.</p>
+            <p>The first wave stems from early 1990’s efforts to reduce pain in patients. This stemmed from the argument that chronic and/or recurrent pain was a serious liability to productivity and quality of life, and the (now proven false) hypothesis that addiction to opioids was a rarity. Further fueling this were pharmaceutical companies advertising their prescriptions as nonaddictive. As a result, opioid prescriptions grew precipitously, and with them an increase in drug overdoses followed.</p>
+            <p>The second wave came as doctors and the government noted the uptick in prescription opioids were causing more drug overdose deaths, and as such began procedures to combat them, which came in two parts:</p>
+            <ol>
+              <li>First, pharmaceutical companies created a new formulation of the pill to extend the release window and resist to being crushed into powder.</li>
+              <li>Secondly, doctors became more cautious with their prescriptions, due both to laws by the government and their own increasing knowledge about the addictiveness of such drugs.</li>
+            </ol>
+            <p>Due to these efforts, prescription drugs alone stopped causing as many deaths. However, more and more people started turning to heroin to get the same effect, and thus the death toll due to heroin began to rise.</p>
+            <p>The third wave, supplementing the second wave, was the addition of synthetic opioids, such as fentanyl. These drugs were highly potent, and overdosing on them very easy. This is the most recent type of drug to be noted, and is notable for its sharp increase in recent years.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="4" class="bg-light" data-aos="zoom-out-up">
+      <div class="container">
+        <div class="row">
+            <h2>The Rise of the Crisis, 1999-2016</h2>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div id="line">
+              <!-- Line graph? -->
+            </div>
+          </div>
+          <div class="col">
+            <label class="slider-label" for="year">1999</label>
+            <input class="slider" type="range" min="1999" max="2016" value="2016" id="year" onchange="updateNationalVis()"></input>
+            <label class="slider-label" for="age">2016</label>
+            <div id="map">
+            <!-- Map? -->
+            </div>
+        </div>
+      </div>
+        <div class="row">
+          <p>Placeholder: caption</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section id="christie-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mx-auto" data-aos="zoom-out-left">
+            <h2>After a year, Christie’s doctor refused to renew her prescription...</h2>
+            <p>...saying that she had been taking the pill for too long. Christie was referred to a pain clinic.</p><br>
+            <p>However, the clinic did not take Christie’s insurance, and Christie was forced to find alternative solutions as her opioid withdrawal symptoms set in.</p><br>
+            <ul><b>
+              <li>Chills</li>
+              <li>Vomiting</li>
+              <li>Nausea</li>
+              <li>Insomnia</li>
+            </b></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mx-auto" data-aos="zoom-out-right">
+            <h2>Image</h2>
+            <p class="lead"></p>
+          </div>
+          <div class="col-lg-6 mx-auto" data-aos="zoom-out-left">
+            <h2>More statistics</h2>
+            <ul>
+              <li>Death rates from overdoses involving synthetic opioids increased in 21 states, with 10 states doubling their rates from 2015 to 2016. New Hampshire, West Virginia, and Massachusetts had the highest death rates from synthetic opioids. (1)</li>
+              <li>More than 46 people die every day from overdoses involving prescription opioids. (2)</li>
+              <li>From 1999 to 2016, more than 200,000 people died in the United States from overdoses related to prescription opioids. Overdose deaths involving prescription opioids were five times higher in 2016 than in 1999 (3)</li>
+              <li>After a steady increase in the overall national opioid prescribing rate starting in 2006, the total number of prescriptions dispensed peaked in 2012 at more than 255 million and a prescribing rate of 81.3 prescriptions per 100 persons. (4)</li>
+              <li>The CDC estimates the total economic burden of prescription opioid misuse in the US is $78.5 billion a year, including the costs of health care, lost productivity, addiction treatment, and criminal justice involvement. (5)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="christie-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 mx-auto" data-aos="zoom-out-left">
+              <h2>“My boyfriend at the time, his brother was into heroin. He said, ‘Try a little bit of this.’ I sniffed it first, and it made all my sickness go away.”</h2>
+              <br>
+              <p>And so Christie spent most of her 20s addicted to heroin. She detoxed and relapsed too many times to count.</p><br>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section id="6" class="bg-light" data-aos="zoom-out-up">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Closer to home: Massachusetts</h2>
+            <p class="lead">Christie’s story is not a unique one. The opioid-related death rate in Massachusetts has surpassed the national average, with an especially sharp rise in the last two years.</p>
+            <br>
+            <p>The opioid crisis in Massachusetts has become particularly dire. In 2013–2014 alone, opioid-related deaths occurred in two-thirds of the cities and towns in Massachusetts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="7" data-aos="zoom-out-up">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mx-auto">
+            <h2>% Deaths by county</h2>
+            <div id="binaryMaps" data-active-date="2005" style="padding-bottom: 5%;" role="img" aria-label="Three maps showing opioid-related deaths in Massachusetts in 5-year intervals from 2001 to 2015.">
+
+                <label class="radio" style="margin:5px;" ><input type="radio" class="js-toggle-binary-map active" data-date="2005" name="optradio" checked> 2001 - 2005 </label>
+                <label class="radio" style="margin:5px;"><input type="radio" class="js-toggle-binary-map" data-date="2010" name="optradio"> 2006 - 2010 </label>
+                <label class="radio" style="margin:5px;"><input type="radio" class="js-toggle-binary-map" data-date="2015" name="optradio"> 2011 - 2015 </label>
+
+                <div id="binaryMaps_legend" class="vis-legend"></div>
+                <div id="binaryMaps_maps"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="8" class="bg-light" data-aos="zoom-out-up">
+      <div class="container">
+            <p class="lead"></p>
+            <div class="row">
+        			<div class="col-md-12">
+        				<h1><span class="h1-sub">The Toll on Massachusetts</span> </h1>
+        				<h2>Gender and Age Information</h2>
+
+        			</div>
+        		</div>
+
+
+
+        		<div class="row">
+        			<div class="col-md-6" >
+        				<h2 id="but-label">Select Gender</h2>
+        				<div id="radio-buttons">
+                  <label class="checkmark container2 rad-but"> Male
+          						<INPUT TYPE="Radio" Name="Gender" Value="Males" id="mal-rad">
+          						<span class="checkmark"></span>
+          					</label>
+          					<label class="container2 rad-but"> Female
+          						<INPUT TYPE="Radio" Name="Gender" Value="Females" id="female-rad">
+          						<span class="checkmark"></span>
+          					</label>
+          					<label class="container2 rad-but">
+          						<INPUT TYPE="Radio" Name="Gender" Value="All" id="all-rad" checked>  All
+          						<span class="checkmark"></span>
+          					</label>
+        				</div>
+        				<br/>
+
+                <div></div>
+                      <br>
+
+        				<div class = "slidecontainer slider-label">
+        					<g>Age selected:</g>
+        					<g id = "age-selected" style="color:red;"></g>
+                        <br>
+                          <g>You are in the age range:</g>
+                          <g id = "agerange-selected" style="color:red;"></g>
+        				</div>
+
+        				<label class="slider-label" for="age"> 18 </label>
+        					<input type="range" id="age-range" name="age"
+        						   min="18" max="65" step ="1" class="slider">
+        				<label class="slider-label" for="age"> 65+ </label>
+
+              </div>
+
+              <div class="col-md-4">
+                    <div class="info-text">In 2014,
+                    <g class="info-text2" id="num-info"> _______ </g>
+                    of all the deaths of
+                    <g class="info-text2" id="gender-info"> ________ </g>
+                    aged
+                    <g class="info-text2" id="age-info"> ______ </g>
+                    were due to opioid related causes.
+                      <br>
+                      <br>
+                      <br>
+                      That's a total of
+                      <g class="info-text2" id="death-info"> ____</g>
+                      deaths.
+
+
+                    </div>
+            </div>
+
+        	</div>
+
+
+        		<div class="row">
+        				<div class="col-md-6">
+        					<div id="pictovis">
+                          </div>
+        				</div>
+        				<div class="col-md-6">
+        					<h2>Opioid Related Deaths in 2014</h2>
+        					<div id="barvis"></div>
+        				</div>
+            </div>
+
+      </div>
+    </section>
+
+    <section id="pre9">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mx-auto" data-aos="zoom-out-right">
+            <h2>What’s Being Done?</h2>
+            <p>FILLER: buttons to show federal, state, local level initiative --></p>
+          </div>
+          <!-- MAKE DYNAMIC -->
+          <div class="col-lg-6 mx-auto" data-aos="zoom-out-left">
+            <p>On the federal level, the US Department of Health and Human Services (HHS) is focusing on:</p>
+            <ul>
+              <li>Improving access to treatment and recovery services.</li>
+              <li>Promoting use of overdose-reversing drugs.</li>
+              <li>Strengthening our understanding of the epidemic through better public health surveillance.</li>
+              <li>Providing support for cutting-edge research on pain and addiction.</li>
+              <li>Advancing better practices for pain management.</li>
+            </ul>
+            <p>The National Institutes of Health (NIH) - a component of HHS has recently (2017) met with pharmaceutical companies and academic research centers to explore:</p>
+            <ol>
+              <li>safe, effective, non-addictive strategies to manage chronic pain</li>
+              <li>new, innovative medications and technologies to treat opioid use disorders.</li>
+              <li>improved overdose prevention and reversal interventions to save lives and support recovery.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="9">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mx-auto" data-aos="zoom-out-right">
+            <h2>Image</h2>
+          </div>
+          <div class="col-lg-6 mx-auto" data-aos="zoom-out-left">
+            <h2>What's next?</h2>
+            <p class="lead">There is still a lot to do. But we are working on it. Massachusetts is:</p>
+            <ol>
+              <li><b>Expanding OAT Treatment</b> — opioid agonist treatment (OAT) can lower the ongoing risk for opioid-related death if it follows a non-fatal overdose. Developing a strategy to effectively deliver OAT could reduce the number of opioid-related deaths in the state.</li>
+              <li><b>Considering Gender</b> — Substance use trends differ depending on gender. This information can be used when developing prevention programs for both men and women.</li>
+              <li><b>Developing Post-incarceration Treatment Plan</b> — The short-term risk for opioid-related death is much higher for individuals who were recently released from prison.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; "What Time is it Right Now": 2018, CS171, Harvard College</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+    <!-- AOS Javascript library-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Load JS libraries -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/d3-tip.js"></script>
+    <script src="js/d3-legend.min.js"></script>
+    <script src="js/queue.v1.min.js"></script>
+    <script src="js/topojson.v1.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+  	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+  	<script src="//cdn.jsdelivr.net/jquery.ui.touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/colorbrewer.js"></script>
+    <script src="js/modernizr.js"></script>
+
+  	<!-- Visualization objects -->
+  	<script src="js/barvis.js"></script>
+  	<script src="js/picto.js"></script>
+
+    <!-- Load visualizations -->
+    <script src="js/steven.js"></script>
+    <script src="js/luke.js"></script>
+    <script src="js/vicky.js"></script>
+    <script src="js/jung.js"></script>
+
+
+  </body>
+
+</html>
+
+<script>
+    AOS.init();
+</script>
