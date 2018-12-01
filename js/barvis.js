@@ -31,7 +31,7 @@ BarVis.prototype.initVis = function(){
     // SVG drawing area
     vis.svg = d3.select("#" + vis.parentElement).append("svg")
         .attr("width", vis.width + vis.margin.left + vis.margin.right)
-        .attr("height", vis.height-20)
+        .attr("height", vis.height-50)
         .append("g")
         .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ") scale(0.7 0.7)");
 
