@@ -154,20 +154,6 @@ function createVisualization() {
         .attr("r", function(d) {
             return circleRadius(d[val]);
         })
-
-        // .append("rect")
-        // .attr("class", "state-value")
-        // .merge(circle)
-        // .transition()
-        // .duration(600)
-        // .style("opacity", 0.4)
-        // .attr("height", function(d) {
-        //     return circleRadius(d[val]);
-        // })
-        // .attr("width", function(d) {
-        //     return circleRadius(d[val]);
-        // })
-
         .attr("fill", "#651FFF")
         .attr("stroke", "#311B92")
         .attr("transform", function(d) {

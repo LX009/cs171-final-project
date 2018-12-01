@@ -20,6 +20,10 @@ h1 {
 	fill: #9E9E9E;
 }
 
+.state-value:hover {
+	filter: brightness(150%);
+}
+
 /* FROM HW5 */
 /*********************/
 /*  TOOLTIP OVERLAY  */
