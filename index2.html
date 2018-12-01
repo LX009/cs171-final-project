@@ -8,8 +8,8 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">    
-    
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
+
     <!-- From fullpage.js library -->
     <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
@@ -122,6 +122,23 @@
                 , a rate that drastically outpaces the increase of other opioid related deaths.</p>
             <p class="caption mt-2"><i>Select dates to explore the historical rise of the opioid crisis.</i></p>
         </div>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col mx-auto">
+            <div id="line">
+              <!-- Line graph? -->
+            </div>
+          </div>
+          <div class="col mx-auto">
+            <label class="slider-label" for="year">1999</label>
+            <input class="slider" type="range" min="1999" max="2016" value="2016" id="year" onchange="updateNationalVis()"></input>
+            <label class="slider-label" for="year">2016</label>
+            <div id="map">
+            <!-- Map? -->
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
     </div>
     <div class="section" id="section7">
         <div class="text">
@@ -252,7 +269,7 @@
 
 <!-- Plugin JavaScript -->
 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    
+
 <!-- fullpage.js library, for scroll behavior -->
 <script type="text/javascript" src="js/fullpage.js"></script>
 
