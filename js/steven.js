@@ -5,7 +5,7 @@
 // set the dimensions and margins of the graph
 var line_chart_margin = {top: 20, right: 20, bottom: 30, left: 50},
     line_chart_width = $("#line").width() - line_chart_margin.left - line_chart_margin.right,
-    line_chart_height = 500 - line_chart_margin.top - line_chart_margin.bottom;
+    line_chart_height = 400 - line_chart_margin.top - line_chart_margin.bottom;
 
 // parse the date / time
 var line_chart_parseTime = d3.timeParse("%Y");
@@ -155,7 +155,7 @@ d3.csv("data/overdose-death-history.csv", function(error, data) {
 var national_map_margin = {top: 30, right: 20, bottom: 30, left: 50};
 
 var national_map_width = $("#map").width() - national_map_margin.left - national_map_margin.right,
-    national_map_height = 500 - national_map_margin.top - national_map_margin.bottom;
+    national_map_height = 400 - national_map_margin.top - national_map_margin.bottom;
 
 var national_map_svg = d3.select("#map").append("svg")
     .attr("width", national_map_width + national_map_margin.left + national_map_margin.right)
