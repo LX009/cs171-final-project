@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Luke */
 
 a:not(.btn) {
@@ -435,3 +436,518 @@ p.headerCaption{
   float:left;
 	padding-right:20px;
 }
+=======
+/* Luke */
+
+a:not(.btn) {
+	color: #3A79D1 !important;
+}
+
+a:not(.btn):hover {
+	color: #2D5C9E !important;
+}
+
+.state {
+	fill: #b5b5b5;
+	opacity: 0.7;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+	box-sizing: border-box;
+	display: inline;
+	font-size: 10px;
+	width: 100%;
+	line-height: 1;
+	color: rgba(60, 60, 60, 0.8);
+	content: "\25BC";
+	position: absolute;
+	text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+	margin: -1px 0 0 0;
+	top: 100%;
+	left: 0;
+}
+
+#section0, #section3, #section4, #section5, #section7, #section12 {
+	padding: 0;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	color: white;
+}
+
+#section0 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../img/img2.jpeg);
+	color: #333;
+}
+
+#section3 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../img/car.jpg);
+}
+
+#section4 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.6)), url(../img/hospital.jpg);
+}
+
+#section5 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.6)), url(../img/smoke.jpg);
+}
+
+#section7 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.6)), url(../img/boston.jpg);
+}
+
+#section12 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.6)), url(../img/harv.jpg);
+}
+
+.intro {
+	text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.half-image {
+	filter: grayscale(0.6);
+	padding: 0;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 5%;
+	border-radius: 15px;
+	border: 2px solid #424242;
+	transition: 0.5s ease;
+}
+
+.half-image:hover {
+	filter: grayscale(0.4);
+	transition: 0.5 ease;
+}
+
+.halftext {
+	text-align: left;
+	padding-right: 8%;
+}
+
+.text {
+	text-align: left;
+    position: absolute;
+    top: 50%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body{
+	font-family: 'Roboto Slab', serif;
+	color: #333;
+}
+
+h1{
+	font-size: 48px;
+	margin-bottom: 20px;
+	font-weight: 400;
+}
+
+h3 {
+	display: inline-block;
+	font-size: 24px;
+	font-style: italic;
+}
+
+ul {
+	list-style:none;
+}
+
+.history {
+	padding: 10px;
+	border-radius: 10px;
+	background-color: rgba(172, 172, 172, 0.5);
+	opacity: 0.88;
+	transition: 0.5s;
+}
+
+.history:hover {
+	opacity: 1;
+	transition: 0.5s;
+}
+
+.symptom {
+	font-size: 18px;
+	font-weight: 700;
+	margin-top: 20px;
+	text-align: center;
+	animation: shake 2s infinite;
+}
+
+.caption {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.icon {
+	width: 120px;
+	height: 120px;
+	margin: 0 auto;
+	border-radius: 50%;
+	display:block;
+	border: 2px solid #EEEEEE;
+}
+
+.people {
+	width: 90%;
+	margin: 0 auto;
+	color: #EEEEEE;
+}
+
+.person:hover {
+	opacity: 1;
+	transition: 0.5s ease;
+}
+
+.person {
+	display: inline-block;
+	width: 20%;
+	padding: 15px;
+	margin: 0 auto;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 10px;
+	background-color: rgba(172, 172, 172, 0.6);
+	opacity: 0.88;
+	transition: 0.5s;
+}
+
+.name {
+	font-size: 24px;
+	font-weight: 400;
+}
+
+.halves {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.small {
+	text-align: center;
+	font-size: 24px;
+}
+
+/* Adapted from https://www.w3schools.com/howto/howto_css_shake_image.asp */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    60% { transform: translate(-1px, 1px) rotate(0.5deg); }
+    70% { transform: translate(0px, 0px) rotate(-0.5deg); }
+    80% { transform: translate(-1px, -1px) rotate(0deg); filter: blur(1px);}
+    90% { transform: translate(0px, 0px) rotate(-0.5deg); }
+    100% { transform: translate(1px, -1px) rotate(0deg); }
+}
+
+/* All p things go here */
+p{
+	font-size: 16px;
+	font-weight: 400;
+}
+
+p.headerCaption{
+	font-size: 18px;
+	font-weight: 300;
+}
+
+.section{
+	text-align:center;
+}
+
+/* Adapted from https://www.kevinleary.net/pulsating-css3-animations/ */
+.pulsate {
+	font-size: 16px;
+	font-weight: 400;
+    -webkit-animation: pulsate 2s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    opacity: 0.5;
+}
+@-webkit-keyframes pulsate {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1.0;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+
+/* Custom CSS from fullPage.js
+ * --------------------------------------- */
+#menu li {
+	display:inline-block;
+	margin: 10px;
+	color: #000;
+	background:#fff;
+	background: rgba(200,200,200, 0.5);
+	-webkit-border-radius: 5px;
+            border-radius: 5px;
+}
+#menu li.active{
+	background:#666;
+	background: rgba(0,0,0, 0.5);
+	color: #fff;
+}
+#menu li a{
+	text-decoration:none;
+	color: #000;
+}
+#menu li.active a:hover{
+	color: #000;
+}
+#menu li:hover{
+	background: rgba(255,255,255, 0.8);
+}
+#menu li a,
+#menu li.active a{
+	padding: 9px 18px;
+	display:block;
+}
+#menu li.active a{
+	color: #fff;
+}
+#menu{
+	position:fixed;
+	top:0;
+	left:5%;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
+.fp-tooltip{
+	color: #757575 !important;
+}
+
+#binaryMaps_maps {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 160px;
+    margin-bottom: 10px;
+}
+
+
+#binaryMaps_maps .map-wrapper {
+    display: inline-block;
+    width: 33%;
+    position: relative; }
+
+#binaryMaps_maps path {
+    fill: #e9e9e9;
+    stroke: #e9e9e9;
+    stroke-width: 1px; }
+
+
+#binaryMaps_maps .selection-label {
+    width: 60%;
+    text-align: center;
+    position: absolute;
+    bottom:25px;
+    left: 0;
+    font-size: 12px;
+    font-family: Helvetica, Arial;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; }
+@media screen and (max-width: 10000px) and (min-width: 0px) {
+    #binaryMaps_maps .selection-label {
+        font-size: 10px; } }
+
+#binaryMaps_maps .svg-container {
+    padding-bottom: 65%; }
+
+#binaryMaps .btn-group {
+    display: none; }
+
+#binaryMaps_maps .vis-title {
+    width: 60%;
+    position: center;
+    bottom: 30%;
+    left: 0; }
+
+@media screen and (max-width: 10000px) and (min-width: 768px) {
+    #binaryMaps_maps .vis-title {
+        bottom: 5%;
+        font-size: 12px; } }
+
+#binaryMaps .btn-group {
+    display: inline-block;
+    width: 100px;
+    margin: 2px auto; }
+
+@media screen and (max-width: 10000px) {
+    #binaryMaps[data-active-date] .map-wrapper {
+        display: none; }
+    #binaryMaps[data-active-date="2005"] .map-wrapper:first-child {
+        display: block; }
+    #binaryMaps[data-active-date="2010"] .map-wrapper:nth-child(2) {
+        display: block; }
+    #binaryMaps[data-active-date="2015"] .map-wrapper:last-child {
+        display: block; } }
+
+@media screen and (max-width: 10000px) {
+    #binaryMaps .map-wrapper {
+        display: block;
+        width: 75%;
+        position: relative; } }
+
+#binaryMaps_legend.vis-legend {
+    margin-left: 25%;
+    max-width: 50%; }
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    /*padding-bottom: 100%;*/
+    /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden; }
+
+.svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    left: 0; }
+
+/* ============================================================
+  SECTIONS
+============================================================ */
+
+.wrapper {
+    background-color: #000000; }
+
+.content {
+    background-color: #ffffff; }
+
+.callout {
+    background-color: #ECEFF1;
+    border: 1px solid #d5dbe0;
+    color: #000000;
+    padding: 17px;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.1); }
+.callout .h3-sm {
+    font-size: 1.5em; }
+.callout a {
+    color: #205493; }
+
+.center {
+    text-align: center;
+    margin: auto; }
+
+.title {
+    color: #455A64;
+    font-weight: normal; }
+
+.subtitle {
+    color: #455A64;
+    font-size: 12px;
+    font-weight: normal; }
+
+div.tooltip {
+    color: white;
+    position: absolute;
+    text-align: center;
+    width: 180px;
+    height: 50px;
+    padding: 2px;
+    font: 16px sans-serif;
+    background: black;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+
+=======
+/* FROM HW5 */
+/*********************/
+/*  TOOLTIP OVERLAY  */
+/*********************/
+
+.tooltip-title {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: 600;
+}
+
+.d3-tip {
+	line-height: 1;
+	padding: 12px;
+	background: rgba(60, 60, 60, 0.8);
+	color: #fff;
+	border-radius: 2px;
+}
+
+/*SLIDERS AND RADIO BUTTON VICKY
+/*Radio Button CSS */
+.rad-but {
+  float:left;
+	padding-right:20px;
+}
+
+/*Slide Made Edits herer*/
+
+.slidecontainer {
+	width: 100%;
+}
+
+.slidecontainer-national {
+	width: 30%;
+	display: block;
+	margin: auto;
+}
+
+.slider {
+	-webkit-appearance: none;
+	width: 70%;
+	height: 25px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+	margin:10px;
+	margin-top:20px;
+	border-radius: 10%;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+}
+
+.slider:hover {
+	opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #254c54;
+	cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	background: #4CAF50;
+	cursor: pointer;
+}
+
+.rad-but {
+  float:left;
+	padding-right:20px;
+}
+
+>>>>>>> 5c70f21dff5354a406946edf2c0c453a64d0d217

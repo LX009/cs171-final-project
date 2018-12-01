@@ -62,7 +62,7 @@ function manageData(error, data1, data2, data3, data4) {
     data1.forEach(function(d){
         d.Population = +d.Population.replace(/,/g, '');
         d.Deaths = +d.Deaths.replace(/,/g, '');
-        d.DeathsPerPop = d.Deaths / d.Population;
+        d.DeathsPerPop = d.Deaths / d.Population * 10000;
 
         data3.forEach(function(e) {
             if (d.Abbrev == e.Abbrev) {
@@ -85,7 +85,7 @@ function manageData(error, data1, data2, data3, data4) {
            if (d.id == e.ID) {
                d.Deaths = e.Deaths;
                d.Population = e.Population;
-               d.DeathsPerPop = d.Deaths / d.Population;
+               d.DeathsPerPop = d.Deaths / d.Population * 10000;
            }
         });
     });
@@ -113,7 +113,7 @@ function createVisualization() {
     } else if (val == "Population"){
         circleRadius.range([5, 20]);
     } else {
-        circleRadius.range([5, 20]);
+        circleRadius.range([5, 15]);
     }
 
     var state = svgLuke.selectAll("path")
@@ -128,7 +128,7 @@ function createVisualization() {
         .attr("class", "d3-tip")
         .offset([-8, 0])
         .html(function(d) {
-            return "<b>" + d.State + "</b><br/><br/>" + "Opioid Related Deaths: " + d.Deaths + "<br/><br/>" + "Population: " + d.Population + "<br/><br/>" + "Deaths per capita: " + d3.format(".4r")(d.DeathsPerPop);
+            return "<b>" + d.State + "</b><br/><br/>" + "Opioid Related Deaths: " + d.Deaths + "<br/><br/>" + "Population: " + d.Population + "<br/><br/>" + "Deaths per 10,000 people: " + d3.format(".2r")(d.DeathsPerPop);
         });
     svgLuke.call(tool_tipLuke);
 
@@ -240,7 +240,7 @@ function createVisualization() {
             } else if (val == "Population"){
                 return d3.format(".2s")(circleRadius.invert(15)) + " people";
             } else {
-                return d3.format(".4r")(circleRadius.invert(15)) + " deaths per capita";
+                return d3.format(".2r")(circleRadius.invert(15)) + " deaths per 10,000 people";
             }
         });
 
