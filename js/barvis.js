@@ -33,7 +33,7 @@ BarVis.prototype.initVis = function(){
         .attr("width", vis.width + vis.margin.left + vis.margin.right)
         .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
         .append("g")
-        .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ") scale(0.9 0.9)");
+        .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ") scale(0.7 0.7)");
 
 
     // Scales and axes

@@ -23,7 +23,7 @@ PictoVis.prototype.initVis = function(){
     var vis = this;
     //placeholder div for jquery slider
 
-    vis.margin = { top: 0, right: 20, bottom: 200, left: 250};
+    vis.margin = { top: 0, right: 20, bottom: 100, left: 250};
 
     vis.width = 550 - vis.margin.left - vis.margin.right,
         vis.height = 650 - vis.margin.top - vis.margin.bottom;
