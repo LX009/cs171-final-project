@@ -63,13 +63,11 @@ BarVis.prototype.initVis = function(){
     .attr("x",-250)
     .attr("y", -60)
     .attr("transform", "rotate(-90)")
-        .text("# of Opioid-related Deaths");
-
+    .text("# of Opioid-related Deaths");
 
     // (Filter, aggregate, modify data)
     vis.wrangleData();
 }
-
 
 /*
  * Data wrangling
