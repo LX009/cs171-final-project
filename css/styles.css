@@ -307,7 +307,10 @@ p.headerCaption{
 
 /*SLIDERS AND RADIO BUTTON VICKY
 /*Radio Button CSS */
-
+.rad-but {
+  float:left;
+	padding-right:20px;
+}
 
 /*Slide Made Edits herer*/
 
@@ -323,6 +326,7 @@ p.headerCaption{
 	outline: none;
 	opacity: 0.7;
 	margin:10px;
+	margin-top:20px;
 	border-radius: 10%;
 	-webkit-transition: .2s;
 	transition: opacity .2s;
