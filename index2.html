@@ -8,8 +8,8 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">    
-    
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
+
     <!-- From fullpage.js library -->
     <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
@@ -149,13 +149,109 @@
             <h2>The Massachusetts situation, by the demographics.</h2>
             <p>(possibly another sentence)</p>
             <p class="caption">
-                    In 2014, 17.6% of all Massachusetts residents aged 35 to 49 who died, <b>x% died due to Opioid-related causes.</b>
+            <div class="info-text">In 2014,
+                <g class="info-text2" id="num-info"> _______ </g>
+                of all the deaths of
+                <g class="info-text2" id="gender-info"> ________ </g>
+                aged
+                <g class="info-text2" id="age-info"> ______ </g>
+                were due to opioid related causes.
+                <br>
+                That's a total of
+                <g class="info-text2" id="death-info"> ____</g>
+                deaths.
+
+                <!--In 2014, 17.6% of all Massachusetts residents aged 35 to 49 who died, <b>x% died due to Opioid-related causes.</b>-->
             </p>
             <p class="caption mt-2"><i>Explore the sliders and options below to learn more.</i></p>
+
         </div>
+
+        <div class="container">
+            <p class="lead"></p>
+
+            <div class="row">
+                <div class="col-md-6" >
+                    <p id="but-label">Select Gender</p>
+                    <div id="radio-buttons">
+                        <label class="container2"> Male
+                            <INPUT TYPE="Radio" Name="Gender" Value="Males" id="mal-rad">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container2"> Female
+                            <INPUT TYPE="Radio" Name="Gender" Value="Females" id="female-rad">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container2">
+                            <INPUT TYPE="Radio" Name="Gender" Value="All" id="all-rad" checked>  All
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <br/>
+
+                    <div></div>
+                    <br>
+
+
+                </div>
+
+                <div class="col-md-6">
+                    <div class = "slidecontainer slider-label">
+                        <g>Age selected:</g>
+                        <g id = "age-selected" style="color:red;"></g>
+                        <br>
+                        <g>You are in the age range:</g>
+                        <g id = "agerange-selected" style="color:red;"></g>
+                    </div>
+
+                    <label class="slider-label" for="age"> 18 </label>
+                    <input type="range" id="age-range" name="age"
+                           min="18" max="65" step ="1" class="slider">
+                    <label class="slider-label" for="age"> 65+ </label>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="pictovis">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Opioid Related Deaths in 2014</h2>
+                    <div id="barvis"></div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
     <div class="section" id="section10">
+
         <h1>What's being done</h1>
+        <h2> Click on each scope to find out actions being taken at each level </h2>
+
+            <div class="row">
+
+                <div class="col-md-4">
+
+                    <div id="government"> <img class="img-thumbnail" style="width: 150px" src="img/government.png">  <p> National </p> </div>
+                    <div id="state"> <img class="img-thumbnail" style="width: 150px" src="img/Massachussets.png"> <p> State </p>  </div>
+                    <div id="local"><img class="img-thumbnail" style="width: 150px" src="img/give-love.png">   <p> Local </p>  </div>
+
+                </div>
+                <div class="col-md-6 halftext" style="align-content: center">
+                    </br></br>
+                    <div class="whatwecando-text"> </div>
+
+                </div>
+            </div>
+
+
     </div>
     <div class="section" id="section11">
         <h2 style="margin-bottom: 50px; color: #EEEEEE;">And there's a lot <b>you</b> can do to help.</h2>
@@ -252,7 +348,7 @@
 
 <!-- Plugin JavaScript -->
 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    
+
 <!-- fullpage.js library, for scroll behavior -->
 <script type="text/javascript" src="js/fullpage.js"></script>
 
@@ -295,6 +391,8 @@
         menu: '#menu'
     });
 </script>
+
+    <script src="js/whatsbeingdone.js"> </script>
 
 </body>
 </html>
