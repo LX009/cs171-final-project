@@ -26,7 +26,7 @@ PictoVis.prototype.initVis = function(){
     vis.margin = { top: 0, right: 20, bottom: 100, left: 250};
 
     vis.width = 550 - vis.margin.left - vis.margin.right,
-        vis.height = 650 - vis.margin.top - vis.margin.bottom;
+        vis.height = 400 - vis.margin.top - vis.margin.bottom;
 
 
     //create svg element
