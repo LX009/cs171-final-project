@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>The Opioid Crisis in America</title>
+    <title>CS171 Final Project: The Opioid Crisis</title>
     <!-- FAVICON -->
     <link rel="shortcut icon" href="img/favicon-medkit.ico"/>
 
@@ -55,7 +55,7 @@
             <div class="col-md-6 halftext">
                 <h2>Christie was 36-years-old.</h2>
                 <p>She came from Springfield, Massachusetts. She was a line cook by day, and she volunteered at the library at night.<br><br>
-                Walking down the street, you would've just passed her by.<br><br>
+                Walking in the street, you would've just passed her by. She was that normal.<br><br>
                 <b>But she was among millions of Americans who became quietly addicted to opioids since the late 1990s.<br><br>
                     Then, in 2014, she became one of thousands of opioid crisis victims who died from an overdose.
                 </b></p>
@@ -73,9 +73,9 @@
         <div class="caption mt-2 mb-2">
             <div class="form-group" style="width: 40%; margin: 0 auto;">
                 <select class="form-control" id="binary">
-                    <option value="DeathsPerPop">Severity</option>
                     <option value="Deaths">Deaths</option>
                     <option value="Population">Population</option>
+                    <option value="DeathsPerPop">Severity</option>
                 </select>
             </div>
         </div>
@@ -99,7 +99,7 @@
     <div class="section" id="section4">
         <div class="text">
             <h2>A year later, Christie's doctor refuses to renew her prescription...</h2>
-            <p>... saying that she'd been taking the pill for too long. He refers her to a pain clinic.
+            <p>... saying that she'd been taking the pill for too long. She refers her to a pain clinic.
                 <br><br> But the clinic doesn't take Christie's insurance, forcing her to find alternative solutions as her withdrawl symptoms set in.
             </p>
             <p class="symptom">Chills. Vomiting. Nausea. Insomnia.</p>
@@ -115,10 +115,9 @@
     </div>
     <div class="section" id="section5">
         <div class="text">
-          <p>Heroin became Christie's solution...</p>
             <h2>"He said, 'Try a little bit of this.' I sniffed it first, and it made all my sickness go away."</h2>
             <br>
-            <p>After an introduction from her boyfriend, Christie spent most of her 20s struggling with a heroin addiction.
+            <p>After an introduction from her then-boyfriend, Christie spends most of her 20s struggling with a heroin addiction.
                 <br><br>She detoxes and relapses too many times to count.</p>
             <br>
             <div class="history">
@@ -170,43 +169,22 @@
         </div>
     </div>
     <div class="section" id="section8">
-        <div class="vis-intro mb-3">
+        <div class="vis-intro">
             <h2>The Toll on Masssachusetts</h2>
             <p class="caption">
                 Opioids have proliferated rapidly since the early 2000s. In 2013-14, opioid-related deaths occured in <b>two-thirds of MA cities and towns</b>, leading then-Governor Deval Patrick to declare a <a href="https://www.publichealthwm.org/application/files/5115/1568/7932/Public_Health_Issue_Brief_October_2015_Opioid_Abuse.pdf"><b>public health emergency</b></a>.
             </p>
-            <p class="caption mt-3"><i>Select time-frames to explore the percent increase in opioid related deaths</i></p>
+            <p class="caption mt-2"><i>Select time-frames to explore the epidemic's spread.</i></p>
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 mx-auto" id="map-buttons">
-              <label class="container2 rad-but" ><input type="radio" class="js-toggle-binary-map active" data-date="2005" name="optradio" checked> 2001 - 2005 <span class="checkmark"></span></label>
-              <label class="container2 rad-but"><input type="radio" class="js-toggle-binary-map" data-date="2010" name="optradio"> 2006 - 2010 <span class="checkmark"></span></label>
-              <label class="container2 rad-but"><input type="radio" class="js-toggle-binary-map" data-date="2015" name="optradio"> 2011 - 2015 <span class="checkmark"></span></label>
-            </div>
-          </div>
-
-            <div class="row">
-                <div class="col-lg-12 mx-auto">
-                    <div id="binaryMaps" data-active-date="2005" style="padding-bottom: 5%;" role="img" aria-label="Three maps showing opioid-related deaths in Massachusetts in 5-year intervals from 2001 to 2015.">
-
-                        <div id="binaryMaps_legend" class="vis-legend"></div>
-                        <div id="binaryMaps_maps"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
     </div>
     <div class="section" id="section9">
       <div class="vis-intro">
           <h2>The Massachusetts situation, by the demographics.</h2>
-          <b><p class="caption mt-3 mb-3"><i>Select age and gender below to learn more.</i></p>
+          <br>
           <p class="caption">
           <div class="info-text">In 2014,
             <g class="info-text2" id="num-info" style="color:#9E3737;"> _______ </g>
-               of all deaths of
+               of all the deaths of
                <g class="info-text2" id="gender-info" style="color:#9E3737;"> ________ </g>
                aged
                <g class="info-text2" id="age-info" style="color:#9E3737;"> ______ </g>
@@ -215,13 +193,18 @@
                That's a total of
                <g class="info-text2" id="death-info" style="color:#9E3737;"> ____</g>
                deaths.
-          </p></b>
+              <!--In 2014, 17.6% of all Massachusetts residents aged 35 to 49 who died, <b>x% died due to Opioid-related causes.</b>-->
+          </p>
+          <p class="caption mt-2"><i>Explore the sliders and options below to learn more.</i></p>
+
       </div>
 
       <div class="container">
           <p class="lead"></p>
+
           <div class="row">
               <div class="col-md-6" >
+                  <p id="but-label">Select Gender</p>
                   <div id="radio-buttons">
                     <label class="container2 rad-but"> Male
                     <INPUT TYPE="Radio" Name="Gender" Value="Males" id="mal-rad">
@@ -232,13 +215,11 @@
                     <span class="checkmark"></span>
                   </label>
                   <label class="container2 rad-but">All
-                    <INPUT TYPE="Radio" Name="Gender" Value="All" id="all-rad" checked>
+                    <INPUT TYPE="Radio" Name="Gender" Value="All" id="all-rad" checked>  
                     <span class="checkmark"></span>
                   </label>
                   </div>
                   <br/>
-
-
               </div>
 
               <div class="col-md-6">
@@ -272,30 +253,9 @@
 
     </div>
 </div>
-    <div class="section" id="section10" style="color: #EEEEEE;">
-        <br>
-        <br>
-        <h2>What's being done?</h2>
-        <p class="caption">There's no avoiding the fact that there's still a lot to do. But organizations across national, state, and locals are working to fight the opioid crisis. And their initiatives are making a difference.</p>
-        <br>
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-5">
-                <div id="government" class="init"><img class="img-thumbnail" style="width: 100px" src="img/government.png">  <p style="width: 40%; margin: 0 auto; margin-bottom: 20px"> US Department of Health and Human Services </p> </div>
-                <div id="local" class="init"><img class="img-thumbnail" style="width: 100px" src="img/give-love.png">   <p style="width: 40%; margin: 0 auto; margin-bottom: 20px"> National Institutes of Health </p>  </div>
-                <div id="state" class="init"> <img class="img-thumbnail" style="width: 100px" src="img/Massachussets.png"> <p style="width: 40%; margin: 0 auto; margin-bottom: 20px"> Massachusetts State </p>  </div>
-            </div>
-            <div class="col-md-5 halftext" style="align-content: center; margin:auto; width: 40% !important;">
-                <div class="whatwecando-text">
-                    <i>No content yet.<br><br>Select an organization to learn about its work.<br><br><br><br></i>
-                </div>
-            </div>
-            <div class="col-md-1"></div>
-        </div>
+    <div class="section" id="section10">
+        <h1>What's being done</h1>
     </div>
-
-
-
     <div class="section" id="section11">
         <h2 style="margin-bottom: 50px; color: #EEEEEE;">And there's a lot <b>you</b> can do to help.</h2>
         <div class="people row">
@@ -349,37 +309,47 @@
     </div>
     <div class="section" id="section13" style="color: white;">
         <div class="ending">
-        <h2><i>References & sources</i></h2>
-        <br>
+        <h2 style="margin-bottom: 50px;"><i>References & sources</i></h2>
         <div class="row halves">
             <div class="col-md-6 halftext">
                 <p class="small">Story</p>
-                <ol style="font-weight: 300; font-size: 14px;">
+                <ol>
                     <li>Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/drugoverdose/pdf/pubs/2018-cdc-drug-surveillance-report.pdf">2018 Annual Surveillance Report of Drug-Related Risks and Outcomes — United States.</a> CDC, Department of Health and Human Services. Published August 31, 2018.</li>
+
                     <li>Seth P, Rudd R, Noonan, R, Haegerich, T. <a href="http://ajph.aphapublications.org/doi/10.2105/AJPH.2017.304265">Quantifying the Epidemic of Prescription Opioid Overdose Deaths.</a> American Journal of Public Health, March 2018.</li>
+
                     <li>Florence CS, Zhou C, Luo F, Xu L. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5975355/">The economic burden of prescription opioid overdose, abuse, and dependence in the U.S.</a> Updated 2016.</li>
+
                     <li>Yale Medicine <a href="https://www.yalemedicine.org/stories/overcoming-opioid-addiction/">Overcoming-Opioid-Addiction.</a> Updated February 28, 2017</li>
+
                     <li>National Institute on Drug Abuse. <a href="https://www.drugabuse.gov/drugs-abuse/opioids/opioid-overdose-crisis">Opioid Overdose Crisis.</a> Revised March 2018.</li>
+
                     <li>Massachusetts Government <a href="https://www.mass.gov/service-details/chapter-55-overdose-report">Chapter 55 Overdose Report</a> Updated August 2017.</li>
                 </ol>
             </div>
             <div class="col-md-6 halftext">
                 <p class="small">Data</h2>
-                <ol style="font-weight: 300; font-size: 14px;">
-                    <li>Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/drugoverdose/data/overdose.html ">Prescription opioid overdose data.</a> Updated August 1, 2017.</li>
-                    <li>Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/drugoverdose/maps/rxrate-maps.html">US prescribing rate maps.</a> Updated July 31, 2017.</li>
-                    <li>Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/nchs/nvss/xvsrr/drug-overdose-data.htm">Drug overdose data.</a></li>
-                    <li>Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/nchs/data-visualization/drug-poisoning-mortality/">Drug poisoning mortality.</a></li>
-                    <li>Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/mmwr/preview/mmwrhtml/mm6450a3.htm?s_cid=mm6450a3_w">Drug overdose deaths by demographics.</a> Updated 2014.</li>
-                    <li>Massachusetts Department of Public Health. <a href="https://www.mass.gov/orgs/department-of-public-health">2014 Opioid Data.</a></li>
-                    <li>Massachusetts Department of Public Health. <a href="https://www.mass.gov/lists/current-opioid-statistics">Current Opioid Data.</a></li>
-                    <li>Kaggle. <a href="https://www.mass.gov/lists/current-opioid-statistics">US Opioid Prescriptions.</a></li>
+                <ol>
+                        <li>Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/drugoverdose/data/overdose.html ">Prescription opioid overdose data.</a> Updated August 1, 2017.</li>
+
+                        <li>Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/drugoverdose/maps/rxrate-maps.html">US prescribing rate maps.</a> Updated July 31, 2017.</li>
+
+                        <li>Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/nchs/nvss/xvsrr/drug-overdose-data.htm">Drug overdose data.</a></li>
+
+                        <li>Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/nchs/data-visualization/drug-poisoning-mortality/">Drug poisoning mortality.</a></li>
+
+                        <li>Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/mmwr/preview/mmwrhtml/mm6450a3.htm?s_cid=mm6450a3_w">Drug overdose deaths by demographics.</a> Updated 2014.</li>
+
+                        <li>Massachusetts Department of Public Health. <a href="https://www.mass.gov/orgs/department-of-public-health">2014 Opioid Data.</a></li>
+
+                        <li>Massachusetts Department of Public Health. <a href="https://www.mass.gov/lists/current-opioid-statistics">Current Opioid Data.</a></li>
                 </ol>
             </div>
         </div>
-        <p class="caption" style="font-weight: 300;"><i>Stock images obtained from Pexels, Unsplash, and Harvard University.</i></p>
         <br>
-        <p class="caption" style="font-weight: bold;"><a href="https://docs.google.com/document/d/12pUUzWVenrz6j6fG07PAl2MsMearhDd1o0X-JAvjEnM/edit#">See our process book.</a></p>
+        <p class="caption"><i>Stock images obtained from Pexels, Unsplash, and Harvard University.</i></p>
+        <br>
+        <p class="caption"> <a href="https://docs.google.com/document/d/12pUUzWVenrz6j6fG07PAl2MsMearhDd1o0X-JAvjEnM/edit#">Process book link</a></p>
         <br>
         </div>
     </div>
@@ -420,11 +390,10 @@
 <script src="js/luke.js"></script>
 <script src="js/vicky.js"></script>
 <script src="js/jung.js"></script>
-<script src="js/whatsbeingdone.js"> </script>
 
 <script type="text/javascript">
     var myFullpage = new fullpage('#fullpage', {
-        sectionsColor: ["#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#424242", "#424242", "#424242", "#424242"],
+        sectionsColor: ["#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#424242", "#424242", "#424242"],
         anchors: ['p0', 'p1', 'p2', 'p3', 'p4',
         'p5', 'p6', 'p7', 'p8',
         'p9', 'p10', 'p11', 'p12', 'p13'],
