@@ -33,7 +33,7 @@ a:not(.btn):hover {
 	left: 0;
 }
 
-#section0, #section3, #section4, #section5, #section7, #section12 {
+#section0, #section3, #section4, #section5, #section7, #section11, #section12 {
 	padding: 0;
 	background-size: cover;
 	background-position: center;
@@ -60,6 +60,10 @@ a:not(.btn):hover {
 
 #section7 {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.6)), url(../img/boston.jpg);
+}
+
+#section11 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(../img/redwhite.jpg);
 }
 
 #section12 {
@@ -184,6 +188,19 @@ ul {
 	transition: 0.5s;
 }
 
+.person {
+	display: inline-block;
+	width: 20%;
+	padding: 15px;
+	margin: 0 auto;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 10px;
+	background-color: rgba(172, 172, 172, 0.6);
+	opacity: 0.88;
+	transition: 0.5s;
+}
+
 .name {
 	font-size: 24px;
 	font-weight: 400;
@@ -197,6 +214,21 @@ ul {
 .small {
 	text-align: center;
 	font-size: 24px;
+}
+
+.init {
+	opacity: 0.6;
+	transition: 0.5s;
+}
+
+.init:hover {
+	opacity: 1;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.thin {
+	font-weight: 100;
 }
 
 /* Adapted from https://www.w3schools.com/howto/howto_css_shake_image.asp */

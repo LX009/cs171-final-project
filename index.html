@@ -169,12 +169,12 @@
         </div>
     </div>
     <div class="section" id="section8">
-                <div class="vis-intro">
+        <div class="vis-intro mb-3">
             <h2>The Toll on Masssachusetts</h2>
             <p class="caption">
                 Opioids have proliferated rapidly since the early 2000s. In 2013-14, opioid-related deaths occured in <b>two-thirds of MA cities and towns</b>, leading then-Governor Deval Patrick to declare a <a href="https://www.publichealthwm.org/application/files/5115/1568/7932/Public_Health_Issue_Brief_October_2015_Opioid_Abuse.pdf"><b>public health emergency</b></a>.
             </p>
-            <p class="caption mt-2"><i>Select time-frames to explore the percent increase in opioid related deaths</i></p>
+            <p class="caption mt-3"><i>Select time-frames to explore the percent increase in opioid related deaths</i></p>
         </div>
         <div class="container">
             <div class="row">
@@ -197,11 +197,11 @@
     <div class="section" id="section9">
       <div class="vis-intro">
           <h2>The Massachusetts situation, by the demographics.</h2>
-          <br>
+          <b><p class="caption mt-3 mb-3"><i>Select age and gender below to learn more.</i></p>
           <p class="caption">
           <div class="info-text">In 2014,
             <g class="info-text2" id="num-info" style="color:#9E3737;"> _______ </g>
-               of all the deaths of
+               of all deaths of
                <g class="info-text2" id="gender-info" style="color:#9E3737;"> ________ </g>
                aged
                <g class="info-text2" id="age-info" style="color:#9E3737;"> ______ </g>
@@ -210,18 +210,13 @@
                That's a total of
                <g class="info-text2" id="death-info" style="color:#9E3737;"> ____</g>
                deaths.
-              <!--In 2014, 17.6% of all Massachusetts residents aged 35 to 49 who died, <b>x% died due to Opioid-related causes.</b>-->
-          </p>
-          <p class="caption mt-2"><i>Explore the sliders and options below to learn more.</i></p>
-
+          </p></b>
       </div>
 
       <div class="container">
           <p class="lead"></p>
-
           <div class="row">
               <div class="col-md-6" >
-                  <p id="but-label">Select Gender</p>
                   <div id="radio-buttons">
                       <label class="container2"> Male
                           <INPUT TYPE="Radio" Name="Gender" Value="Males" id="mal-rad">
@@ -272,22 +267,25 @@
 
     </div>
 </div>
-    <div class="section" id="section10">
+    <div class="section" id="section10" style="color: #EEEEEE;">
         <br>
         <br>
-
-        <h3>What's being done</h3>
-        <h5> Click on each scope to find out actions being taken at each level </h5>
+        <h2>What's being done?</h2>
+        <p class="caption">There's no avoiding the fact that there's still a lot to do. But organizations across national, state, and locals are working to fight the opioid crisis. And their initiatives are making a difference.</p>
+        <br>
         <div class="row">
-            <div class="col-md-4">
-                <div id="government"> <img class="img-thumbnail" style="width: 100px" src="img/government.png">  <p> US Department of Health and Human Services </p> </div>
-                <div id="local"><img class="img-thumbnail" style="width: 100px" src="img/give-love.png">   <p> National Institutes of Health </p>  </div>
-                <div id="state"> <img class="img-thumbnail" style="width: 100px" src="img/Massachussets.png"> <p> Massachusetts State </p>  </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+                <div id="government" class="init"><img class="img-thumbnail" style="width: 100px" src="img/government.png">  <p style="width: 40%; margin: 0 auto; margin-bottom: 20px"> US Department of Health and Human Services </p> </div>
+                <div id="local" class="init"><img class="img-thumbnail" style="width: 100px" src="img/give-love.png">   <p style="width: 40%; margin: 0 auto; margin-bottom: 20px"> National Institutes of Health </p>  </div>
+                <div id="state" class="init"> <img class="img-thumbnail" style="width: 100px" src="img/Massachussets.png"> <p style="width: 40%; margin: 0 auto; margin-bottom: 20px"> Massachusetts State </p>  </div>
             </div>
-            <div class="col-md-6 halftext" style="align-content: center">
-                <br>
-                <div class="whatwecando-text"> </div>
+            <div class="col-md-5 halftext" style="align-content: center; margin:auto; width: 40% !important;">
+                <div class="whatwecando-text">
+                    <i>No content yet.<br><br>Select an organization to learn about its work.<br><br><br><br></i>
+                </div>
             </div>
+            <div class="col-md-1"></div>
         </div>
     </div>
 
@@ -421,7 +419,7 @@
 
 <script type="text/javascript">
     var myFullpage = new fullpage('#fullpage', {
-        sectionsColor: ["#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#424242", "#424242", "#424242"],
+        sectionsColor: ["#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#424242", "#424242", "#424242", "#424242"],
         anchors: ['p0', 'p1', 'p2', 'p3', 'p4',
         'p5', 'p6', 'p7', 'p8',
         'p9', 'p10', 'p11', 'p12', 'p13'],
