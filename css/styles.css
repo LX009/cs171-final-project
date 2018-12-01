@@ -494,7 +494,7 @@ div.tooltip {
 
 /* When the radio button is checked, add a blue background */
 .container2 input:checked ~ .checkmark {
-	background-color: #2196F3;
+	background-color: #2D5C9E;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
