@@ -20,14 +20,14 @@
 </head>
 <body>
 
-<ul id="menu">
+<!-- <ul id="menu">
     <li data-menuanchor="p0" class="active"><a href="#p0">Intro</a></li>
     <li data-menuanchor="p1"><a href="#p1">Meet Christie</a></li>
     <li data-menuanchor="p6"><a href="#p6">Rise of the crisis</a></li>
     <li data-menuanchor="p7"><a href="#p7">Closer to home</a></li>
     <li data-menuanchor="p11"><a href="#p11">How to help</a></li>
     <li data-menuanchor="p12"><a href="#p12">Team</a></li>
-</ul>
+</ul> -->
 
 <div id="fullpage">
     <div class="section" id="section0">
@@ -67,6 +67,18 @@
             <p class="caption">In 2014, the Centers for Disease Control and Prevention found <a href="https://www.washingtonpost.com/news/to-your-health/wp/2015/12/11/deaths-from-heroin-overdoses-surged-in-2014/?utm_term=.a5399a0fcdd6">over 28,000 deaths from prescription opioids and heroin.</a>
             It was a record 14% increase over the previous year.</p>
             <p class="caption mt-2"><i>Play with the visualization below to learn more about 2014.</i></p>
+        </div>
+        <div class="caption mt-2 mb-2">
+            <div class="form-group" style="width: 40%; margin: 0 auto;">
+                <select class="form-control" id="binary">
+                    <option value="Deaths">Deaths</option>
+                    <option value="Population">Population</option>
+                    <option value="DeathsPerPop">Severity</option>
+                </select>
+            </div>
+        </div>
+        <div class="container">
+            <div id="symbol-map-area"></div>
         </div>
     </div>
     <div class="section" id="section3">

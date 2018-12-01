@@ -1,4 +1,30 @@
-/* Adapted from Luke's Midterm 2 */
+/* Luke */
+
+
+.state {
+	fill: #b5b5b5;
+	opacity: 0.7;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+	box-sizing: border-box;
+	display: inline;
+	font-size: 10px;
+	width: 100%;
+	line-height: 1;
+	color: rgba(60, 60, 60, 0.8);
+	content: "\25BC";
+	position: absolute;
+	text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+	margin: -1px 0 0 0;
+	top: 100%;
+	left: 0;
+}
 
 #section0, #section3, #section4, #section5, #section7, #section12 {
 	padding: 0;
@@ -212,8 +238,7 @@ p.headerCaption{
 }
 
 
-
-/* Custom CSS
+/* Custom CSS from fullPage.js
  * --------------------------------------- */
 #menu li {
 	display:inline-block;
@@ -259,4 +284,24 @@ p.headerCaption{
 }
 .fp-tooltip{
 	color: #757575 !important;
+}
+
+
+/* FROM HW5 */
+/*********************/
+/*  TOOLTIP OVERLAY  */
+/*********************/
+
+.tooltip-title {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: 600;
+}
+
+.d3-tip {
+	line-height: 1;
+	padding: 12px;
+	background: rgba(60, 60, 60, 0.8);
+	color: #fff;
+	border-radius: 2px;
 }
