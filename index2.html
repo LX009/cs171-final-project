@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CS171 Final Project: The Opioid Crisis</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/favicon-medkit.ico"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
+
+    <!-- From fullpage.js library -->
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+    <!-- FontAwesome icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+</head>
+<body>
+
+<!-- <ul id="menu">
+    <li data-menuanchor="p0" class="active"><a href="#p0">Intro</a></li>
+    <li data-menuanchor="p1"><a href="#p1">Meet Christie</a></li>
+    <li data-menuanchor="p6"><a href="#p6">Rise of the crisis</a></li>
+    <li data-menuanchor="p7"><a href="#p7">Closer to home</a></li>
+    <li data-menuanchor="p11"><a href="#p11">How to help</a></li>
+    <li data-menuanchor="p12"><a href="#p12">Team</a></li>
+</ul> -->
+
+<div id="fullpage">
+    <div class="section" id="section0">
+        <div class="intro">
+            <h1 class="mb-4">Killed by Pain</h1>
+            <p class="headerCaption">
+                Every day, <b>over 115 Americans</b> die from an opioid overdose.
+                Prescription opioid misuse costs <b>$78.5b a year</b> in healthcare, lost productivity, addiction treatment, and criminal justice.
+                <br><br>
+                The situation is bad, and it's only getting worse.
+                <br><br>
+                <b>This is the story of the opioid crisis in America.</b>
+            </p>
+            <br><br>
+            <p class="pulsate"><b>Scroll to continue</b> &nbsp; <i class="fas fa-angle-double-down"></i></p>
+        </div>
+    </div>
+    <div class="section" id="section1">
+        <div class="row halves">
+            <div class="col-md-6">
+                <img src="img/c2.jpeg" class="half-image">
+            </div>
+            <div class="col-md-6 halftext">
+                <h2>Christie was 36-years-old.</h2>
+                <p>She came from Springfield, Massachusetts. She was a line cook by day, and she volunteered at the library at night.<br><br>
+                Walking in the street, you would've just passed her by. She was that normal.<br><br>
+                <b>But she was among millions of Americans who became quietly addicted to opioids since the late 1990s.<br><br>
+                    Then, in 2014, she became one of thousands of opioid crisis victims who died from an overdose.
+                </b></p>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section2">
+        <!-- REMINDER: figure out what properties to give vis-intro -->
+        <div class="vis-intro">
+            <h2>Christie isn't alone.</h2>
+            <p class="caption">In 2014, the Centers for Disease Control and Prevention found <a href="https://www.washingtonpost.com/news/to-your-health/wp/2015/12/11/deaths-from-heroin-overdoses-surged-in-2014/?utm_term=.a5399a0fcdd6">over 28,000 deaths from prescription opioids and heroin.</a>
+            It was a record 14% increase over the previous year.</p>
+            <p class="caption mt-2"><i>Play with the visualization below to learn more about 2014.</i></p>
+        </div>
+        <div class="caption mt-2 mb-2">
+            <div class="form-group" style="width: 40%; margin: 0 auto;">
+                <select class="form-control" id="binary">
+                    <option value="Deaths">Deaths</option>
+                    <option value="Population">Population</option>
+                    <option value="DeathsPerPop">Severity</option>
+                </select>
+            </div>
+        </div>
+        <div class="container">
+            <div id="symbol-map-area"></div>
+        </div>
+    </div>
+    <div class="section" id="section3">
+        <div class="text">
+            <h2>The story starts in 1998, with a car accident...</h2>
+            <p>... that leaves 18-year-old Christie with chronic pain in her lower back.
+                Therapy doesn't work out, so the family doctor prescribes her <b>Oxycontin, a high risk painkiller</b>.</p>
+            <br><br><br>
+            <div class="history">
+                <h3><i class="fas fa-pills"></i> The First Wave: late 1990s</h3><br>
+                <p>America's opioid crisis began with early efforts to reduce pain in patients. Americans were concerned with chronic pain, and pharmaceutical companies responded by advertising their prescriptions as <b>non-addictive</b>.
+                    <br><br>As a result, opioid prescriptions skyrocketed, and drug overdoses followed.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section4">
+        <div class="text">
+            <h2>A year later, Christie's doctor refuses to renew her prescription...</h2>
+            <p>... saying that she'd been taking the pill for too long. She refers her to a pain clinic.
+                <br><br> But the clinic doesn't take Christie's insurance, forcing her to find alternative solutions as her withdrawl symptoms set in.
+            </p>
+            <p class="symptom">Chills. Vomiting. Nausea. Insomnia.</p>
+            <br><br>
+            <div class="history">
+                <h3><i class="fas fa-pills"></i> The Second Wave: the 2000s</h3><br>
+                <p>Opioid prescriptions <b>nearly triple</b>, even as doctors try to curb the rise.
+                    <br><br>Meanwhile, the healthcare system is slow to identify and help with this treatment.
+                    Many people with addictions don't receive treatment, and turn elsewhere: <b>heroin</b>.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section5">
+        <div class="text">
+            <h2>"He said, 'Try a little bit of this.' I sniffed it first, and it made all my sickness go away."</h2>
+            <br>
+            <p>After an introduction from her then-boyfriend, Christie spends most of her 20s struggling with a heroin addiction.
+                <br><br>She detoxes and relapses too many times to count.</p>
+            <br>
+            <div class="history">
+                <h3><i class="fas fa-pills"></i> The Third Wave: late 2000s to present</h3><br>
+                <p>Heroin now causes a larger share of deaths than prescription opioids, but there are new players in the game: <b>synthetic opioids</b>. They're highly potent and easy to overdose on, and they've become alarmingly available in recent years.
+                    <br><br>
+                    One of the deadliest is <b>fentanyl</b>. It's 30-50x more powerful than heroin, and 100x more powerful than morphine.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section6">
+        <div class="vis-intro">
+            <h2>There's a larger trend here.</h2>
+            <p class="caption">Since 2013, the number of overdose deaths caused by synthetic opioids has <a href="https://www.nytimes.com/interactive/2018/11/29/upshot/fentanyl-drug-overdose-deaths.html">risen from 3,000 to over 28,000</a>
+                , a rate that drastically outpaces the increase of other opioid related deaths.</p>
+            <p class="caption mt-2"><i>Select dates to explore the historical rise of the opioid crisis.</i></p>
+        </div>
+        <div class="slidecontainer-national">
+          <label class="slider-label" for="year">1999</label>
+          <input class="slider" type="range" min="1999" max="2016" value="2016" id="year" onchange="updateNationalVis()"></input>
+          <label class="slider-label" for="age">2016</label>
+        </div>
+        <div class="row">
+          <div class="col-md-1 mx-auto"></div>
+          <div class="col-md-4 mx-auto">
+            <div id="line">
+              <!-- Line graph? -->
+            </div>
+          </div>
+          <div class="col-md-6 mx-auto">
+            <div id="map">
+            <!-- Map? -->
+            </div>
+        </div>
+        <div class="col-md-1 mx-auto"></div>
+      </div>
+    </div>
+    <div class="section" id="section7">
+        <div class="text">
+            <h2>Even as close as Massachusetts, Christie's story is <b>all too common</b>.</h2>
+            <br>
+            <p>The opioid-related death rate in MA - over 29.7 deaths per 100,000 persons in 2016 - is <b>more than double the national average</b>.
+                This puts Massachusetts in the ten states with the highest rates of opioid-related deaths.
+                <br><br>
+                From 2012 to 2016, deaths attributed to opioid overdose have risen <b>from around 600 deaths to over 1800</b>.
+                Of those, 1550 were caused by synthetic opioids.
+            </p>
+        </div>
+    </div>
+    <div class="section" id="section8">
+        <div class="vis-intro">
+            <h2>The Toll on Masssachusetts</h2>
+            <p class="caption">
+                Opioids have proliferated rapidly since the early 2000s. In 2013-14, opioid-related deaths occured in <b>two-thirds of MA cities and towns</b>, leading then-Governor Deval Patrick to declare a <a href="https://www.publichealthwm.org/application/files/5115/1568/7932/Public_Health_Issue_Brief_October_2015_Opioid_Abuse.pdf"><b>public health emergency</b></a>.
+            </p>
+            <p class="caption mt-2"><i>Select time-frames to explore the epidemic's spread.</i></p>
+        </div>
+    </div>
+    <div class="section" id="section9">
+      <div class="vis-intro">
+          <h2>The Massachusetts situation, by the demographics.</h2>
+          <br>
+          <p class="caption">
+          <div class="info-text">In 2014,
+            <g class="info-text2" id="num-info" style="color:#9E3737;"> _______ </g>
+               of all the deaths of
+               <g class="info-text2" id="gender-info" style="color:#9E3737;"> ________ </g>
+               aged
+               <g class="info-text2" id="age-info" style="color:#9E3737;"> ______ </g>
+               were due to opioid related causes.
+               <br>
+               That's a total of
+               <g class="info-text2" id="death-info" style="color:#9E3737;"> ____</g>
+               deaths.
+              <!--In 2014, 17.6% of all Massachusetts residents aged 35 to 49 who died, <b>x% died due to Opioid-related causes.</b>-->
+          </p>
+          <p class="caption mt-2"><i>Explore the sliders and options below to learn more.</i></p>
+
+      </div>
+
+      <div class="container">
+          <p class="lead"></p>
+
+          <div class="row">
+              <div class="col-md-6" >
+                  <p id="but-label">Select Gender</p>
+                  <div id="radio-buttons">
+                    <label class="container2 rad-but"> Male
+                    <INPUT TYPE="Radio" Name="Gender" Value="Males" id="mal-rad">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container2 rad-but"> Female
+                    <INPUT TYPE="Radio" Name="Gender" Value="Females" id="female-rad">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container2 rad-but">All
+                    <INPUT TYPE="Radio" Name="Gender" Value="All" id="all-rad" checked>  
+                    <span class="checkmark"></span>
+                  </label>
+                  </div>
+                  <br/>
+              </div>
+
+              <div class="col-md-6">
+                  <div class = "slidecontainer slider-label">
+                      <g>Age selected:</g>
+                      <g id = "age-selected" style="color:#9E3737;"></g>
+                      <br>
+                      <g>You are in the age range:</g>
+                      <g id = "agerange-selected" style="color:#9E3737;"></g>
+                  </div>
+
+                  <label class="slider-label" for="age"> 18 </label>
+                  <input type="range" id="age-range" name="age"
+                         min="18" max="65" step ="1" class="slider">
+                  <label class="slider-label" for="age"> 65+ </label>
+                  </div>
+              </div>
+
+          </div>
+
+
+          <div class="row">
+              <div class="col-md-6">
+                  <div id="pictovis">
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div id="barvis"></div>
+              </div>
+          </div>
+
+    </div>
+</div>
+    <div class="section" id="section10">
+        <h1>What's being done</h1>
+    </div>
+    <div class="section" id="section11">
+        <h2 style="margin-bottom: 50px; color: #EEEEEE;">And there's a lot <b>you</b> can do to help.</h2>
+        <div class="people row">
+            <div class="col person">
+                <h3><i class="fas fa-phone"></i></h3>
+                <p class="name">Reach out</p>
+                <p>Call <b>SAMHSA</b>'s National Helpline, a free & confidential hotline, if you or someone you know struggles with addiction. <br><br> It's open 24/7, 365 days a year.</p>
+                <br><a role="button" class="btn btn-outline-light" href="https://www.samhsa.gov/find-help/national-helpline" target="_blank">Visit SAMHSA</a>
+            </div>
+            <div class="col person">
+                <h3><i class="fas fa-dollar-sign"></i></h3>
+                <p class="name">Donate</p>
+                <p>Support organizations like <b>Shatterproof</b>, a national nonprofit committed to helping families affected by addiction.
+                <br><br>Connect people to the help they need.</p>
+                <br><a role="button" class="btn btn-outline-light" href="https://connect.clickandpledge.com/w/Form/4e21c330-0011-430e-a2c0-5400c4ba45d5" target="_blank">Get started</a>
+            </div>
+            <div class="col person">
+                <h3><i class="fas fa-user-friends"></i></h3>
+                <p class="name">Get involved</p>
+                <p>Find out what your local aid efforts look like. Read up on current events. Then, tell your friends.
+                    <br><br><b>Awareness saves lives.</b></p>
+                <br><a role="button" class="btn btn-outline-light" href="https://www.hhs.gov/about/agencies/iea/partnerships/opioid-toolkit/federal-resources/index.html" target="_blank">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section12">
+        <h2 style="margin-bottom: 16px; color: #EEEEEE;">About our team.</h2>
+        <p class="caption" style="margin-bottom: 32px;">This is a final project for Harvard's <b>CS171: Data Visualization.</b></p>
+        <div class="people row">
+            <div class="col person">
+                <img src="img/luke.jpeg" alt="Luke" class="icon mb-4">
+                <p class="name">Luke Xu</p>
+                <p>Luke is a junior in Pforzheimer House. He concentrates in English with a secondary in Computer Science.</p>
+            </div>
+            <div class="col person">
+                <img src="img/vicky.jpg" alt="Vicky" class="icon mb-4">
+                <p class="name">Vicky Xu</p>
+                <p>Vicky is a junior in Currier House. She concentrates in Applied Mathematics.</p>
+            </div>
+            <div class="col person">
+                <img src="img/steven.jpg" alt="Steven" class="icon mb-4">
+                <p class="name">Steven Jin</p>
+                <p>Steven is a senior in Currier House. He concentrates in Computer Science with a secondary in Music.</p>
+            </div>
+            <div class="col person">
+                <img src="img/jung.jpg" alt="Jung" class="icon mb-4">
+                <p class="name">Jung Hur</p>
+                <p>Jung is a senior in Quincy House. She concentrates in Bioengineering with a secondary in Computer Science.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section13" style="color: white;">
+        <div class="ending">
+        <h2 style="margin-bottom: 50px;"><i>References & sources</i></h2>
+        <div class="row halves">
+            <div class="col-md-6 halftext">
+                <p class="small">Story</p>
+                <ol>
+                    <li>Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/drugoverdose/pdf/pubs/2018-cdc-drug-surveillance-report.pdf">2018 Annual Surveillance Report of Drug-Related Risks and Outcomes — United States.</a> CDC, Department of Health and Human Services. Published August 31, 2018.</li>
+
+                    <li>Seth P, Rudd R, Noonan, R, Haegerich, T. <a href="http://ajph.aphapublications.org/doi/10.2105/AJPH.2017.304265">Quantifying the Epidemic of Prescription Opioid Overdose Deaths.</a> American Journal of Public Health, March 2018.</li>
+
+                    <li>Florence CS, Zhou C, Luo F, Xu L. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5975355/">The economic burden of prescription opioid overdose, abuse, and dependence in the U.S.</a> Updated 2016.</li>
+
+                    <li>Yale Medicine <a href="https://www.yalemedicine.org/stories/overcoming-opioid-addiction/">Overcoming-Opioid-Addiction.</a> Updated February 28, 2017</li>
+
+                    <li>National Institute on Drug Abuse. <a href="https://www.drugabuse.gov/drugs-abuse/opioids/opioid-overdose-crisis">Opioid Overdose Crisis.</a> Revised March 2018.</li>
+
+                    <li>Massachusetts Government <a href="https://www.mass.gov/service-details/chapter-55-overdose-report">Chapter 55 Overdose Report</a> Updated August 2017.</li>
+                </ol>
+            </div>
+            <div class="col-md-6 halftext">
+                <p class="small">Data</h2>
+                <ol>
+                        <li>Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/drugoverdose/data/overdose.html ">Prescription opioid overdose data.</a> Updated August 1, 2017.</li>
+
+                        <li>Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/drugoverdose/maps/rxrate-maps.html">US prescribing rate maps.</a> Updated July 31, 2017.</li>
+
+                        <li>Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/nchs/nvss/xvsrr/drug-overdose-data.htm">Drug overdose data.</a></li>
+
+                        <li>Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/nchs/data-visualization/drug-poisoning-mortality/">Drug poisoning mortality.</a></li>
+
+                        <li>Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/mmwr/preview/mmwrhtml/mm6450a3.htm?s_cid=mm6450a3_w">Drug overdose deaths by demographics.</a> Updated 2014.</li>
+
+                        <li>Massachusetts Department of Public Health. <a href="https://www.mass.gov/orgs/department-of-public-health">2014 Opioid Data.</a></li>
+
+                        <li>Massachusetts Department of Public Health. <a href="https://www.mass.gov/lists/current-opioid-statistics">Current Opioid Data.</a></li>
+                </ol>
+            </div>
+        </div>
+        <br>
+        <p class="caption"><i>Stock images obtained from Pexels, Unsplash, and Harvard University.</i></p>
+        <br>
+        <p class="caption"> <a href="https://docs.google.com/document/d/12pUUzWVenrz6j6fG07PAl2MsMearhDd1o0X-JAvjEnM/edit#">Process book link</a></p>
+        <br>
+        </div>
+    </div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- fullpage.js library, for scroll behavior -->
+<script type="text/javascript" src="js/fullpage.js"></script>
+
+<!-- Load JS libraries -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/d3.min.js"></script>
+<script src="js/d3-tip.js"></script>
+<script src="js/d3-legend.min.js"></script>
+<script src="js/queue.v1.min.js"></script>
+<script src="js/topojson.v1.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<script src="//cdn.jsdelivr.net/jquery.ui.touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/colorbrewer.js"></script>
+<script src="js/modernizr.js"></script>
+
+  <!-- Visualization objects -->
+  <script src="js/barvis.js"></script>
+  <script src="js/picto.js"></script>
+
+<!-- Load visualizations -->
+<script src="js/steven.js"></script>
+<script src="js/luke.js"></script>
+<script src="js/vicky.js"></script>
+<script src="js/jung.js"></script>
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        sectionsColor: ["#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#EEEEEE", "#424242", "#424242", "#424242"],
+        anchors: ['p0', 'p1', 'p2', 'p3', 'p4',
+        'p5', 'p6', 'p7', 'p8',
+        'p9', 'p10', 'p11', 'p12', 'p13'],
+        navigation:true,
+        navigationTooltips: ['Introduction', 'Meet Christie', 'Explore 2014', 'The First Wave', 'The Second Wave', 'The Third Wave', 'Explore history', 'Closer to home', 'Explore MA counties', 'Explore MA demographics', 'Initiatives', 'How to help', 'About us', 'Sources'],
+        showActiveTooltip: true,
+        menu: '#menu'
+    });
+</script>
+
+</body>
+</html>
