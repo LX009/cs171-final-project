@@ -23,7 +23,7 @@ BarVis.prototype.initVis = function(){
     var vis = this;
     console.log(vis.data[1]);
 
-    vis.margin = { top: 30, right: 20, bottom: 0, left: 50 };
+    vis.margin = { top: 30, right: 20, bottom: 0, left: 80 };
 
     vis.width = $("#" + vis.parentElement).width() - vis.margin.left - vis.margin.right,
         vis.height = 450 - vis.margin.top - vis.margin.bottom;
