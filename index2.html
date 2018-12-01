@@ -121,6 +121,22 @@
             <p class="caption">Since 2013, the number of overdose deaths caused by synthetic opioids has <a href="https://www.nytimes.com/interactive/2018/11/29/upshot/fentanyl-drug-overdose-deaths.html">risen from 3,000 to over 28,000</a>
                 , a rate that drastically outpaces the increase of other opioid related deaths.</p>
             <p class="caption mt-2"><i>Select dates to explore the historical rise of the opioid crisis.</i></p>
+            <div class="row">
+              <div class="col-md-1 mx-auto"></div>
+              <div class="col mx-auto">
+                <div id="line">
+                  <!-- Line graph? -->
+                </div>
+              </div>
+              <div class="col mx-auto">
+                <label class="slider-label" for="year">1999</label>
+                <input class="slider" type="range" min="1999" max="2016" value="2016" id="year" onchange="updateNationalVis()"></input>
+                <label class="slider-label" for="age">2016</label>
+                <div id="map">
+                <!-- Map? -->
+                </div>
+            </div>
+            <div class="col-md-1 mx-auto"></div>
         </div>
     </div>
     <div class="section" id="section7">
@@ -147,14 +163,85 @@
     <div class="section" id="section9">
         <div class="vis-intro">
             <h2>The Massachusetts situation, by the demographics.</h2>
-            <p>(possibly another sentence)</p>
             <p class="caption">
-                    In 2014, 17.6% of all Massachusetts residents aged 35 to 49 who died, <b>x% died due to Opioid-related causes.</b>
+            <div class="info-text">In 2014,
+                <g class="info-text2" id="num-info"> _______ </g>
+                of all the deaths of
+                <g class="info-text2" id="gender-info"> ________ </g>
+                aged
+                <g class="info-text2" id="age-info"> ______ </g>
+                were due to opioid related causes.
+                <br>
+                That's a total of
+                <g class="info-text2" id="death-info"> ____</g>
+                deaths.
+                <!--In 2014, 17.6% of all Massachusetts residents aged 35 to 49 who died, <b>x% died due to Opioid-related causes.</b>-->
             </p>
             <p class="caption mt-2"><i>Explore the sliders and options below to learn more.</i></p>
+
         </div>
+
+        <div class="container">
+            <p class="lead"></p>
+
+            <div class="row">
+                <div class="col-md-6" >
+                    <p id="but-label">Select Gender</p>
+                    <div id="radio-buttons">
+                        <label class="container2"> Male
+                            <INPUT TYPE="Radio" Name="Gender" Value="Males" id="mal-rad">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container2"> Female
+                            <INPUT TYPE="Radio" Name="Gender" Value="Females" id="female-rad">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container2">All
+                            <INPUT TYPE="Radio" Name="Gender" Value="All" id="all-rad" checked>
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <br/>
+
+
+                </div>
+
+                <div class="col-md-6">
+                    <div class = "slidecontainer slider-label">
+                        <g>Age selected:</g>
+                        <g id = "age-selected" style="color:red;"></g>
+                        <br>
+                        <g>You are in the age range:</g>
+                        <g id = "agerange-selected" style="color:red;"></g>
+                    </div>
+
+                    <label class="slider-label" for="age"> 18 </label>
+                    <input type="range" id="age-range" name="age"
+                           min="18" max="65" step ="1" class="slider">
+                    <label class="slider-label" for="age"> 65+ </label>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="pictovis">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="barvis"></div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
     <div class="section" id="section10">
+
         <br>
         <br>
 
@@ -171,6 +258,8 @@
                 <div class="whatwecando-text"> </div>
             </div>
         </div>
+
+
     </div>
     <div class="section" id="section11">
         <h2 style="margin-bottom: 50px; color: #EEEEEE;">And there's a lot <b>you</b> can do to help.</h2>
@@ -204,22 +293,22 @@
             <div class="col person">
                 <img src="img/luke.jpeg" alt="Luke" class="icon mb-4">
                 <p class="name">Luke Xu</p>
-                <p>Luke Xu is a junior in Pforzheimer House. He concentrates in English with a secondary in Computer Science.</p>
+                <p>Luke is a junior in Pforzheimer House. He concentrates in English with a secondary in Computer Science.</p>
             </div>
             <div class="col person">
-                <img src="img/c2.jpeg" alt="Luke" class="icon mb-4">
+                <img src="img/vicky.jpg" alt="Vicky" class="icon mb-4">
                 <p class="name">Vicky Xu</p>
-                <p>asdf.</p>
+                <p>Vicky is a junior in Currier House. She concentrates in Economics.</p>
             </div>
             <div class="col person">
-                <img src="img/c2.jpeg" alt="Luke" class="icon mb-4">
+                <img src="img/steven.jpg" alt="Steven" class="icon mb-4">
                 <p class="name">Steven Jin</p>
-                <p>asdf.</p>
+                <p>Steven is a senior in Currier House. He concentrates in Computer Science with a secondary in Music.</p>
             </div>
             <div class="col person">
-                <img src="img/c2.jpeg" alt="Luke" class="icon mb-4">
+                <img src="img/jung.jpg" alt="Jung" class="icon mb-4">
                 <p class="name">Jung Hur</p>
-                <p>asdf.</p>
+                <p>Jung is a junior in Currier House. She concentrates in Bioengineering with a secondary in Computer Science.</p>
             </div>
         </div>
     </div>
@@ -311,6 +400,8 @@
         menu: '#menu'
     });
 </script>
+
+    <script src="js/whatsbeingdone.js"> </script>
 
 </body>
 </html>
