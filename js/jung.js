@@ -100,7 +100,7 @@ generateLegend_map_sub(opChgScale, 'binaryMaps_legend', 'Rate per 100,000 People
 function generateLegend_map_sub(scale, szDivId, szCaption) {
 
     var legendHeight = 50,
-        legendWidth = '90%';
+        legendWidth = '50%';
 
     var $maps_sub_svg = d3.select('#' + szDivId).append("svg")
         .attr("width", legendWidth)
