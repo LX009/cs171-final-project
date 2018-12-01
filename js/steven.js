@@ -19,7 +19,7 @@ var line_chart_y = d3.scaleLinear()
 
 var line_legend_scale = d3.scaleOrdinal()
   .domain(["Prescription", "Heroin", "Synthetic Opioids"])
-  .range(["blue", "orange", "green"]);
+  .range(["#3A79D1", "#B74040", "#FFC4D6"]);
 
 // define the 1st line
 var line_chart_prescription = d3.line()
@@ -71,7 +71,7 @@ d3.csv("data/overdose-death-history.csv", function(error, data) {
       .datum(data)
       .attr("class", "line")
       .style("fill", "none")
-      .style("stroke", "blue")
+      .style("stroke", "#3A79D1")
       .style("stroke-width", "2px")
       .attr("d", line_chart_prescription);
 
@@ -80,7 +80,7 @@ d3.csv("data/overdose-death-history.csv", function(error, data) {
       .datum(data)
       .attr("class", "line")
       .style("fill", "none")
-      .style("stroke", "orange")
+      .style("stroke", "#B74040")
       .style("stroke-width", "2px")
       .attr("d", line_chart_heroin);
 
@@ -89,7 +89,7 @@ d3.csv("data/overdose-death-history.csv", function(error, data) {
       .datum(data)
       .attr("class", "line")
       .style("fill", "none")
-      .style("stroke", "green")
+      .style("stroke", "#FFC4D6")
       .style("stroke-width", "2px")
       .attr("d", line_chart_synthetic);
 
@@ -169,7 +169,7 @@ var national_map_path = d3.geoPath()
     .projection(national_map_projection);
 
 var national_map_color = d3.scaleLinear()
-  .range(["lightgrey", "red"]);
+  .range(["white", "#618189"]);
 
 var national_map_legend = d3.legendColor()
   .title("Deaths per 100,000 People")
