@@ -60,8 +60,9 @@ BarVis.prototype.initVis = function(){
 
     // Axis title
     vis.svg.append("text")
-        .attr("x", -50)
-        .attr("y", -8)
+    .attr("x",-250)
+    .attr("y", -60)
+    .attr("transform", "rotate(-90)")
         .text("# of Opioid-related Deaths");
 
 
