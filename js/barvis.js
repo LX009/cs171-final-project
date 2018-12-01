@@ -62,7 +62,7 @@ BarVis.prototype.initVis = function(){
     vis.svg.append("text")
         .attr("x", -50)
         .attr("y", -8)
-        .text("Number of People");
+        .text("# of Opioid-related Deaths");
 
 
     // (Filter, aggregate, modify data)
