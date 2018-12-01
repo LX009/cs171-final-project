@@ -177,19 +177,31 @@
             <p class="caption mt-2"><i>Select time-frames to explore the percent increase in opioid related deaths</i></p>
         </div>
         <div class="container">
+          <div class="row">
+            <div class="col-lg-12 mx-auto" id="map-buttons">
+              <label class="container2 rad-but" ><input type="radio" class="js-toggle-binary-map active" data-date="2005" name="optradio" checked> 2001 - 2005 <span class="checkmark"></span></label>
+              <label class="container2 rad-but"><input type="radio" class="js-toggle-binary-map" data-date="2010" name="optradio"> 2006 - 2010 <span class="checkmark"></span></label>
+              <label class="container2 rad-but"><input type="radio" class="js-toggle-binary-map" data-date="2015" name="optradio"> 2011 - 2015 <span class="checkmark"></span></label>
+            </div>
+          </div>
+
             <div class="row">
                 <div class="col-lg-12 mx-auto">
                     <div id="binaryMaps" data-active-date="2005" style="padding-bottom: 5%;" role="img" aria-label="Three maps showing opioid-related deaths in Massachusetts in 5-year intervals from 2001 to 2015.">
 
-                        <label class="radio" style="margin:5px;" ><input type="radio" class="js-toggle-binary-map active" data-date="2005" name="optradio" checked> 2001 - 2005 </label>
-                        <label class="radio" style="margin:5px;"><input type="radio" class="js-toggle-binary-map" data-date="2010" name="optradio"> 2006 - 2010 </label>
-                        <label class="radio" style="margin:5px;"><input type="radio" class="js-toggle-binary-map" data-date="2015" name="optradio"> 2011 - 2015 </label>
+
+
+
 
                         <div id="binaryMaps_legend" class="vis-legend"></div>
                         <div id="binaryMaps_maps"></div>
                     </div>
                 </div>
             </div>
+          <div class="row">
+            <div class="col-lg-12 mx-auto">
+            </div>
+          </div>
         </div>
 
 

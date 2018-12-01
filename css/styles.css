@@ -365,12 +365,7 @@ p.headerCaption{
         position: relative; } }
 
 #binaryMaps_legend.vis-legend {
-<<<<<<< HEAD
     max-width: 100%; }
-=======
-	max-width: 100%;
-}
->>>>>>> 1f6348a30e4de23c5962ecc676a52ed9ca051dbe
 
 .svg-container {
     display: inline-block;
@@ -584,8 +579,11 @@ div.tooltip {
 #radio-buttons {
 	padding-left:170px;
 }
-<<<<<<< HEAD
-=======
+#map-buttons {
+	padding:20px;
+	padding-left:380px;
+}
+
 
 #binaryMaps_maps {
     width: 100%;
@@ -723,5 +721,3 @@ div.tooltip {
     border-radius: 8px;
     pointer-events: none;
 }
-
->>>>>>> 1f6348a30e4de23c5962ecc676a52ed9ca051dbe
