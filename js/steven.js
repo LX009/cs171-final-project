@@ -62,7 +62,7 @@ d3.csv("data/overdose-death-history.csv", function(error, data) {
   });
 
   // Scale the range of the data
-  line_chart_x.domain(d3.extent(data, function(d) { return d.year; }));
+  line_chart_x.domain([line_chart_parseTime(1998), line_chart_parseTime(2017)]);
   line_chart_y.domain([0, d3.max(data, function(d) {
 	  return d.synthetic; })]);
 
@@ -169,7 +169,7 @@ var national_map_path = d3.geoPath()
     .projection(national_map_projection);
 
 var national_map_color = d3.scaleLinear()
-  .range(["white", "#618189"]);
+  .range(["white", "#3D5156"]);
 
 var national_map_legend = d3.legendColor()
   .title("Deaths per 100,000 People")
