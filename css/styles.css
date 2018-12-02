@@ -382,13 +382,23 @@ p.headerCaption{
 
 @media screen and (max-width: 10000px) {
     #binaryMaps[data-active-date] .map-wrapper {
-        display: none; }
+        transition: opacity 3s ease-out;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+    }
     #binaryMaps[data-active-date="2005"] .map-wrapper:first-child {
-        display: block; }
+        transition: opacity 1s ease-in;
+        opacity: 1;
+        height: auto; }
     #binaryMaps[data-active-date="2010"] .map-wrapper:nth-child(2) {
-        display: block; }
+        transition: opacity 1s ease-in;
+        opacity: 1;
+        height: auto; }
     #binaryMaps[data-active-date="2015"] .map-wrapper:last-child {
-        display: block; } }
+        transition: opacity 1s ease-in;
+        opacity: 1;
+        height: auto; } }
 
 @media screen and (max-width: 10000px) {
     #binaryMaps .map-wrapper {
@@ -423,18 +433,6 @@ p.headerCaption{
 .content {
     background-color: #ffffff; }
 
-.callout {
-    background-color: #ECEFF1;
-    border: 1px solid #d5dbe0;
-    color: #000000;
-    padding: 17px;
-    border-radius: 2px;
-    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.1); }
-.callout .h3-sm {
-    font-size: 1.5em; }
-.callout a {
-    color: #205493; }
-
 .center {
     text-align: center;
     margin: auto; }
@@ -463,7 +461,6 @@ div.tooltip {
 }
 
 
-=======
 /* FROM HW5 */
 /*********************/
 /*  TOOLTIP OVERLAY  */

@@ -62,13 +62,22 @@ function createMassVisualization(wrapper, geo, data) {
 
 
 
-    $maps_sub.selectAll('path')
-        .data(geo.features)
+    var massmap = $maps_sub.selectAll('path')
+        .data(geo.features);
+
+    massmap
         .enter()
         .append('path')
         .attr('d', pathJung)
-        .style("stroke", "lightgray")
-        .style("stroke-width", "0.0px")
+        .merge(massmap);
+
+    massmap
+        .enter()
+        .append('path')
+        .attr('d', pathJung)
+        .merge(massmap)
+        .style("stroke", "black")
+        .style("stroke-width", ".3px")
         .style('fill', function(d, i) {
             var value = data.values[d.properties.TOWN];
             return palette(value);
@@ -86,6 +95,10 @@ function createMassVisualization(wrapper, geo, data) {
                 .duration(500)
                 .style("opacity", 0);
         });
+
+    massmap.style("opacity", 0.1).transition().duration(3000);
+
+    massmap.exit().remove();
 
 }
 
